@@ -1,0 +1,247 @@
+/* Variables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+$toolbar-color:           rgba(34, 34, 34, 0.70);
+$button-active-color:     #2ab4a5;
+$toolbar-height:          48px;
+
+$toolbar-height-mobile-portrait:  42px;
+$toolbar-height-mobile-landscape: 36px;
+
+/* end variables ––––––––––––––––––––––––––––––––– */
+
+
+
+
+
+
+
+
+/* Toolbar Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+gp-toolbar {
+
+  > md-toolbar.gp-toolbar {
+
+    @include all-height($toolbar-height);
+    background: $toolbar-color;
+
+    >.md-toolbar-tools {
+
+      @include all-height($toolbar-height);
+      background: $toolbar-color;
+
+    }
+  }
+
+
+
+
+/* Top Toolbar
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+gp-toolbar {
+
+  &.gp-toolbar-top {
+
+
+
+  }
+}
+
+/* end toolbar ––––––––––––––––––––––––––––––––––– */
+
+
+
+
+
+
+
+
+/* Bottom Toolbar
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+  &.gp-toolbar-bottom {
+
+
+    // Fix pesky icons (temporary)
+    // ------------------------------
+
+    .reddit {
+      margin-bottom: 7px;
+    }
+    .twitter {
+      margin-bottom: 7px;
+    }
+
+
+    // Active button
+    // ------------------------------
+
+    .md-button {
+      &.active {
+        md-icon {
+          color: $button-active-color;
+          svg {
+            fill: $button-active-color;
+          }
+        }
+      }
+    }
+
+
+    // Collapse buttons on small viewports
+    // ------------------------------
+
+
+
+
+  }
+
+/* end toolbar ––––––––––––––––––––––––––––––––––– */
+
+
+
+
+
+
+
+
+  /* Fullscreen Toggle Animation
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+  &.is-fullscreen {
+    position: absolute;
+    &.gp-toolbar-top {
+      transform: translate3d(0, -100%, 0);
+    }
+    &.gp-toolbar-bottom {
+      transform: translate3d(0, 200%, 0);
+    }
+  }
+
+  &.is-fullscreen-add,
+  &.is-fullscreen-remove {
+    position: relative;
+    transition: 0.2s ease-in all;
+  }
+
+  &.is-fullscreen-add-active,
+  &.is-fullscreen-remove-active {
+    transition: height $swift-ease-in-duration $swift-ease-in-timing-function,
+                min-height $swift-ease-in-duration $swift-ease-in-timing-function,
+                max-height $swift-ease-in-duration $swift-ease-in-timing-function;
+  }
+
+  &.is-fullscreen-add.is-fullscreen-add-active,
+  &.is-fullscreen-remove.is-fullscreen-remove-active {
+    transition: $swift-ease-out;
+  }
+}
+
+/* end animation ––––––––––––––––––––––––––––––––– */
+
+
+
+
+
+
+
+
+/* Fullscreen Toggle Button
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.button-fullscreen {
+  //display: block;
+  position: absolute;
+
+  right: 0;
+  bottom: 2px;
+
+  z-index: 500;
+  //transition: 0.2s ease-in all;
+  transition: $swift-ease-in;
+
+  md-icon {
+    color: #fff;
+  }
+
+  &.is-fullscreen {
+    background-color: #f00;
+    right: 32px;
+    //transform: translate(calc(-100% + 32px), calc(-100% + 32px));
+    bottom: 8px;
+    //transition: $swift-ease-in-duration $swift-ease-in-timing-function;
+    transition: bottom $swift-ease-in-duration $swift-ease-in-timing-function,
+                right $swift-ease-in-duration $swift-ease-in-timing-function,
+                opacity 5s $swift-ease-out-timing-function;
+    opacity: 0.13;
+    &.md-fab.md-focused {
+      background-color: #f00;
+    }
+    &:hover {
+      opacity: 1.00;
+    }
+    md-icon {
+      padding-bottom: 1px;
+    }
+    .md-ripple-container {
+      //background-color: rgba(255, 0, 0, 0.11);
+    }
+  }
+}
+
+
+// Move above player bar
+// ------------------------------
+
+@media only screen and (min-width: 0) and (max-width: $viewport-sm) and (orientation: portrait) {
+  .button-fullscreen {
+    &.is-fullscreen {
+    }
+  }
+}
+
+/* end button –––––––––––––––––––––––––––––––––––– */
+
+
+
+
+
+
+
+
+/* Mobile Sizes
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+// Handle mobile portrait
+// ------------------------------
+
+@media only screen and (min-width: 0) and (max-width: $viewport-sm) and (orientation: portrait) {
+  gp-toolbar {
+    > md-toolbar.gp-toolbar {
+      @include all-height($toolbar-height-mobile-portrait);
+      >.md-toolbar-tools {
+        @include all-height($toolbar-height-mobile-portrait);
+      }
+    }
+  }
+}
+
+// Handle mobile landscape
+// ------------------------------
+@media only screen and (min-width: 0) and (max-width: $viewport-sm) and (orientation: landscape) {
+  gp-toolbar {
+    > md-toolbar.gp-toolbar {
+      @include all-height($toolbar-height-mobile-landscape);
+      >.md-toolbar-tools {
+        @include all-height($toolbar-height-mobile-landscape);
+      }
+    }
+  }
+}
+
+/* end mobile sizes –––––––––––––––––––––––––––––– */

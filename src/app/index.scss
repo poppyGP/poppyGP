@@ -1,0 +1,252 @@
+/* Inject Bower Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+// bower:scss
+// endbower
+
+
+
+
+/* Variables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+$device-breakpoints: (
+  // mobile portrait
+  xs-sm: 360px,
+  xs-md: 400px,
+  xs-lg: 480px,
+  // mobile landscape, tablet portrait
+  sm-sm: 600px,
+  sm-md: 720px,
+  sm-lg: 840px,
+  // tablet landscape, small screen
+  md-sm: 960px,
+  md-md: 1024px,
+  md-lg: 1280px,
+  // large screen, television
+  lg-sm: 1440px,
+  lg-md: 1600px,
+  lg-lg: 1920px
+);
+
+$viewport-xs-sm: map-get($device-breakpoints, xs-sm);
+$viewport-xs-md: map-get($device-breakpoints, xs-md);
+$viewport-xs-lg: map-get($device-breakpoints, xs-lg);
+
+$viewport-sm-sm: map-get($device-breakpoints, sm-sm);
+$viewport-sm-md: map-get($device-breakpoints, sm-md);
+$viewport-sm-lg: map-get($device-breakpoints, sm-lg);
+
+$viewport-md-sm: map-get($device-breakpoints, md-sm);
+$viewport-md-md: map-get($device-breakpoints, md-md);
+$viewport-md-lg: map-get($device-breakpoints, md-lg);
+
+$viewport-lg-sm: map-get($device-breakpoints, lg-sm);
+$viewport-lg-md: map-get($device-breakpoints, lg-md);
+$viewport-lg-lg: map-get($device-breakpoints, lg-lg);
+
+
+// ngMaterial Breakpoints + xs/xl
+// ------------------------------
+
+$viewport-xs: $viewport-xs-sm;
+$viewport-sm: $viewport-sm-sm;
+$viewport-md: $viewport-md-sm;
+$viewport-lg: 1200px;
+$viewport-xl: $viewport-lg-md;
+
+
+// ngMaterial Easing Curves
+// ------------------------------
+
+$swift-ease-out-duration: 0.4s !default;
+$swift-ease-out-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1) !default;
+$swift-ease-out: all $swift-ease-out-duration $swift-ease-out-timing-function !default;
+
+$swift-ease-in-duration: 0.3s !default;
+$swift-ease-in-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2) !default;
+$swift-ease-in: all $swift-ease-in-duration $swift-ease-in-timing-function !default;
+
+$swift-ease-in-out-duration: 0.5s !default;
+$swift-ease-in-out-timing-function: cubic-bezier(0.35, 0, 0.25, 1) !default;
+$swift-ease-in-out: all $swift-ease-in-out-duration $swift-ease-in-out-timing-function !default;
+
+/* end variables ––––––––––––––––––––––––––––––––– */
+
+
+
+
+
+
+
+
+/* Functions
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+// Retrieve name of next breakpoint (or null for last)
+// ------------------------------
+
+@function next-bp($name, $bps: $device-breakpoints, $names: map-keys($bps)) {
+  $n: index($names, $name);
+  @return if($n < length($names), nth($names, $n + 1), null);
+}
+
+
+// Retrieve breakpoint min width (or null for first)
+// ------------------------------
+
+@function min-bp($name, $bps: $device-breakpoints) {
+  $min: map-get($bps, $name);
+  @return if($min != 0, $min, null);
+}
+
+
+// Retrieve breakpoint max width (or null for last)
+// ------------------------------
+
+@function max-bp($name, $bps: $device-breakpoints) {
+  $next: next-bp($name, $bps);
+  @return if($next, min-bp($next, $bps) - 1px, null);
+}
+
+/* end functions ––––––––––––––––––––––––––––––––– */
+
+
+
+
+
+
+
+
+/* Mixins
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+@mixin all-height($height) {
+  max-height: $height !important;
+  min-height: $height !important;
+  height: $height !important;
+}
+
+@mixin all-width($width) {
+  max-width: $width !important;
+  min-width: $width !important;
+  width: $width !important;
+}
+
+
+// @media min-width
+// ------------------------------
+
+@mixin media-gt($name, $bps: $device-breakpoints) {
+  $min: min-bp($name, $bps);
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  }
+  @else {
+    @content;
+  }
+}
+
+
+// @media max-width
+// ------------------------------
+
+@mixin media-lt($name, $bps: $device-breakpoints) {
+  $max: max-bp($name, $bps);
+  @if $max {
+    @media (max-width: $max - 1px) {
+      @content;
+    }
+    @else {
+      @content;
+    }
+  }
+}
+
+
+// breakpoint-min <= x < breakpoint-max
+// ------------------------------
+
+@mixin media($name, $bps: $grid-breakpoints) {
+  @include media-gt($name, $bps) {
+    @include media-lt($name, $bps) {
+      @content;
+    }
+  }
+}
+
+/* end mixins –––––––––––––––––––––––––––––––––––– */
+
+
+
+
+
+
+
+
+/* Base
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+html {
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Verdana, sans-serif;
+  height: 100%;
+}
+
+body {
+  background: #111111;
+  height: 100%;
+  position: relative;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+/* end base –––––––––––––––––––––––––––––––––––––– */
+
+
+
+
+/* Layout
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* end layout –––––––––––––––––––––––––––––––––––– */
+
+
+
+
+
+/* Responsive
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+// remove md-sidenav backdrop above sm
+@media (min-width: $viewport-lg) {
+  md-backdrop.md-sidenav-backdrop,
+  md-backdrop.md-sidenav-backdrop.md-opaque.ng-leave {
+    display: none;
+    opacity: 1 !important;
+    transition: none !important;
+  }
+}
+
+/* end responsive –––––––––––––––––––––––––––––––– */
+
+
+
+
+/* Inject Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+// injector
+// endinjector
