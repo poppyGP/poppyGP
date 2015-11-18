@@ -2,6 +2,8 @@
   'use strict';
 
   angular
-    .module('poppygp', ['poppygp.core']);
+    .module('poppygp', [
+      'poppygp.core'
+    ]);
 
 })();
