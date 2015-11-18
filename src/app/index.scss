@@ -1,8 +1,4 @@
-/* Font-Awesome
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-$fa-font-path: "../../bower_components/font-awesome/fonts";
-@import "../../bower_components/font-awesome/scss/font-awesome.scss";
 
 
 
@@ -10,8 +6,14 @@ $fa-font-path: "../../bower_components/font-awesome/fonts";
 /* Bootstrap-Sass
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-$navbar-inverse-link-color: #5AADBB;
-// $icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+@import
+  'core/style/variables',
+  'core/style/typography',
+  'core/style/utilities',
+  'core/style/vendor',
+  'core/style/base',
+  'core/style/layout',
+  'core/style/components';
 
 
 
