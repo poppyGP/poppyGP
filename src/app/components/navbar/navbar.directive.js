@@ -3,10 +3,10 @@
 
   angular
     .module('poppygp')
-    .directive('acmeNavbar', acmeNavbar);
+    .directive('gpNavbar', gpNavbar);
 
   /** @ngInject */
-  function acmeNavbar() {
+  function gpNavbar() {
     var directive = {
       restrict: 'E',
       templateUrl: 'app/components/navbar/navbar.html',

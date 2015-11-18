@@ -20,12 +20,12 @@
       timeInMs = new Date();
       timeInMs = timeInMs.setHours(timeInMs.getHours() - 24);
 
-      el = angular.element('<acme-navbar creation-date="' + timeInMs + '"></acme-navbar>');
+      el = angular.element('<gp-navbar creation-date="' + timeInMs + '"></gp-navbar>');
 
       $compile(el)($rootScope.$new());
       $rootScope.$digest();
       vm = el.isolateScope().vm;
-      // ctrl = el.controller('acmeNavbar');
+      // ctrl = el.controller('gpNavbar');
     }));
 
     it('should be compiled', function() {
