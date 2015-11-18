@@ -3,7 +3,8 @@
 
   angular
     .module('poppygp', [
-      'poppygp.core'
+      'poppygp.core',
+      'poppygp.layout'
     ]);
 
 })();
