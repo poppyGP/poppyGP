@@ -1,16 +1,21 @@
-/**
- *  If you want to override some bootstrap variables, you have to change values here.
- *  The list of variables are listed here bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss
- */
+/* Bootstrap-Sass
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 $navbar-inverse-link-color: #5AADBB;
 $icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 
-/**
- *  Do not remove the comments below. It's the markers used by wiredep to inject
- *  sass dependencies when defined in the bower.json of your dependencies
- */
+
+
+
+/* Inject Bower Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 // bower:scss
 // endbower
+
+
+
+
+/* Yeoman (Remove)
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .browsehappy {
   margin: 0.2em 0;
@@ -27,9 +32,10 @@ $icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/"
   }
 }
 
-/**
- *  Do not remove the comments below. It's the markers used by gulp-inject to inject
- *  all your sass files automatically
- */
+
+
+
+/* Inject Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 // injector
 // endinjector

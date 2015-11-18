@@ -3,7 +3,7 @@
   'use strict';
 
   angular
-    .module('poppygp')
+    .module('poppygp.core')
     .constant('malarkey', malarkey)
     .constant('moment', moment);
 
