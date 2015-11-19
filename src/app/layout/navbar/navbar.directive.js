@@ -2,14 +2,14 @@
   'use strict';
 
   angular
-    .module('poppygp')
-    .directive('gpNavbar', gpNavbar);
+    .module('poppygp.layout')
+    .directive('gpNavbar', gpNavbarDirective);
 
   /** @ngInject */
-  function gpNavbar() {
+  function gpNavbarDirective() {
     var directive = {
       restrict: 'E',
-      templateUrl: 'app/components/navbar/navbar.html',
+      templateUrl: 'app/layout/navbar/navbar.html',
       scope: {
           creationDate: '='
       },
