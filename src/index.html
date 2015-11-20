@@ -135,7 +135,7 @@
 
 
 
-<body>
+<body ng-controller="MainController as main">
 
 
 
@@ -175,27 +175,11 @@
 
   </gp-navbar>
 
+  <gp-subnav>
+
+  </gp-subnav>
+
   <!-- end top navigation bar –––––––––––––––––––––– -->
-
-
-
-
-
-
-
-
-
-
-
-
-  <!-- Content Panel
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-
-  <div id="container-panel">
-
-  </div>
-
-  <!-- end content panel ––––––––––––––––––––––––––– -->
 
 
 
@@ -211,11 +195,17 @@
   <!-- Main Container
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-  <div id="container-main" class="container-fluid">
+  <div id="container-main">
+
+
+    <!-- Player Row
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
     <gp-video-player channel-id="20560398">
 
     </gp-video-player>
+
+    <!-- ––––––––––––––––––––––––––––––––––––––––––––– -->
 
     <!--
     <div class="main" ui-view>
@@ -225,6 +215,26 @@
   </div>
 
   <!-- end main container –––––––––––––––––––––––––– -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Content Panel Container
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <div id="container-panel">
+
+  </div>
+
+  <!-- end content panel ––––––––––––––––––––––––––– -->
 
 
 

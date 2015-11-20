@@ -1,4 +1,38 @@
 #container-main {
-  height: 100%;
+  overflow: hidden;
+  height: 50%;
+  width: 100%;
+  @media (min-width: $screen-sm-min) {
+
+  }
+  @media (min-width: $screen-md-min) {
+    float: left;
+    height: 100%;
+    width: auto;
+  }
+  @media (min-width: $screen-lg-min) {
+
+  }
   padding: 0;
+  >.row {
+
+  }
+}
+
+#container-panel {
+  background: #222;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: $container-panel-height;
+  width: 100%;
+  @media (min-width: $screen-sm-min) {
+  }
+  @media (min-width: $screen-md-min) {
+    height: 100%;
+    width: $container-panel-width-md;
+  }
+  @media (min-width: $screen-lg-min) {
+    height: 100%;
+    width: $container-panel-width-lg;
+  }
 }
