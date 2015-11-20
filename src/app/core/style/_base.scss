@@ -1,7 +1,9 @@
 html,
 body {
+  padding-top: $navbar-height;
   height: 100%;
   min-height: 100%;
+  position: relative;
 }
 
 
