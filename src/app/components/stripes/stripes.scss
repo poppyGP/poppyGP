@@ -1,0 +1,10 @@
+.gp-stripes {
+  display: inline-block;
+  position: absolute;
+  top: 6px;
+  left: 16px;
+  + * {
+    display: inline-block;
+    margin-left: 64px;
+  }
+}

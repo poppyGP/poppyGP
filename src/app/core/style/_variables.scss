@@ -1,26 +1,6 @@
 /* GPQuery Suite Variables
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-//
-// GPQuery-Livery Colurs
-// v0.6.0
-//
-// Copyright © 2015
-//
-// @author    Jonathan Ho <joho@joho.io>
-// @created   12-Aug-2015
-// @modified  14-Aug-2015
-//
-// @package GPQuery-Livery
-// @description
-// Sass colour variables for GPQuery suite.
-//
-
-
-
-/* Colours
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
 // International Motor Racing Colours
 // ------------------------------
 $gpq-ita-red                    : rgba(204, 0, 0, 1.00 );         // #cc0000 - rosso corsa
@@ -403,10 +383,12 @@ $dropdown-caret-color:           $gray-base;
 // Note: These variables are not generated into the Customizer.
 
 $zindex-navbar:            1000 !default;
+$zindex-subnav:            $zindex-navbar + 10;
 $zindex-dropdown:          1000 !default;
 $zindex-popover:           1060 !default;
 $zindex-tooltip:           1070 !default;
 $zindex-navbar-fixed:      1030 !default;
+$zindex-subnav-fixed:      $zindex-navbar-fixed + 10;
 $zindex-modal-background:  1040 !default;
 $zindex-modal:             1050 !default;
 
@@ -503,7 +485,7 @@ $container-lg:                 $container-large-desktop !default;
 
 // Basics of a navbar
 $navbar-height:                    36px;
-$navbar-margin-bottom:             $line-height-computed !default;
+$navbar-margin-bottom:             0; //$line-height-computed !default;
 $navbar-border-radius:             $border-radius-base !default;
 $navbar-padding-horizontal:        floor(($grid-gutter-width / 2)) !default;
 $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2) !default;
@@ -1086,9 +1068,9 @@ $hr-border:                   $gray-lighter !default;
 /* Subnav Variables
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-$subnav-height:               ceil($navbar-height * 0.5);
+$subnav-height:               24px;
 
-$subnav-margin-bottom:        $line-height-computed;
+$subnav-margin-bottom:        0; //$line-height-computed;
 $subnav-border-radius:        $border-radius-base;
 $subnav-padding-horizontal:   $navbar-padding-horizontal;
 $subnav-padding-vertical:     $navbar-padding-vertical / 2;
@@ -1119,31 +1101,5 @@ $subnav-brand-hover-bg:       transparent;
 $subnav-toggle-hover-bg:      #ddd;
 $subnav-toggle-icon-bar-bg:   #888;
 $subnav-toggle-border-color:  #ddd;
-
-/* ––––––––––––––––––––––––––––––––––––––––––––––– */
-
-
-
-
-
-
-
-
-/* Responsive Container Variables
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-// Vertical Stack
-// ------------------------------
-$container-panel-height:    50%;
-$container-main-height:     (100% - $container-panel-height);
-
-// Horizontal
-// ------------------------------
-$container-panel-width-sm:  15%;
-$container-main-width-sm:   (100% - $container-panel-width-sm);
-$container-panel-width-md:  20%;
-$container-main-width-md:   (100% - $container-panel-width-md);
-$container-panel-width-lg:  25%;
-$container-main-width-lg:   (100% - $container-panel-width-lg);
 
 /* ––––––––––––––––––––––––––––––––––––––––––––––– */

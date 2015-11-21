@@ -2,6 +2,19 @@
   'use strict';
 
   angular
-    .module('poppygp.core', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ngAria', 'ngResource', 'ui.router', 'toastr']);
+    .module('poppygp.core', [
+
+      'ngAnimate',
+      'ngAria',
+      'ngCookies',
+      'ngMessages',
+      'ngResource',
+      'ngSanitize',
+      'ngTouch',
+
+      'ui.router',
+      'toastr'
+
+    ]);
 
 })();

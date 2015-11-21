@@ -4,6 +4,8 @@
   angular
     .module('poppygp', [
       'poppygp.core',
+
+      'poppygp.components',
       'poppygp.layout'
     ]);
 
