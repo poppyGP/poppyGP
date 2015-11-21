@@ -3,10 +3,10 @@
 
   angular
     .module('poppygp')
-    .directive('acmeMalarkey', acmeMalarkey);
+    .directive('gpTicker', gpTickerDirective);
 
   /** @ngInject */
-  function acmeMalarkey(malarkey) {
+  function gpTickerDirective(malarkey) {
     var directive = {
       restrict: 'E',
       scope: {
@@ -14,7 +14,7 @@
       },
       template: '&nbsp;',
       link: linkFunc,
-      controller: MalarkeyController,
+      controller: TickerController,
       controllerAs: 'vm'
     };
 
@@ -26,19 +26,19 @@
         typeSpeed: 40,
         deleteSpeed: 40,
         pauseDelay: 800,
-        loop: true,
+        loop: false,
         postfix: ' '
       });
 
-      el.addClass('acme-malarkey');
+      el.addClass('gp-ticker');
 
       angular.forEach(scope.extraValues, function(value) {
         typist.type(value).pause().delete();
       });
 
-      watcher = scope.$watch('vm.contributors', function() {
-        angular.forEach(vm.contributors, function(contributor) {
-          typist.type(contributor.login).pause().delete();
+      watcher = scope.$watch('vm.tickerTape', function() {
+        angular.forEach(vm.tickerTape, function(message) {
+          typist.type(message).pause().delete();
         });
       });
 
@@ -48,25 +48,22 @@
     }
 
     /** @ngInject */
-    function MalarkeyController($log, githubContributor) {
+    function TickerController($log) {
       var vm = this;
 
-      vm.contributors = [];
+      vm.tickerTape = [];
 
       activate();
 
       function activate() {
-        return getContributors().then(function() {
-          $log.info('Activated Contributors View');
-        });
-      }
-
-      function getContributors() {
-        return githubContributor.getContributors(10).then(function(data) {
-          vm.contributors = data;
-
-          return vm.contributors;
-        });
+        vm.tickerTape = [
+          'Twitter status update message from $http.get()',
+          'New Reddit post from $http.get()',
+          'Twitter status update message from $http.get()',
+          'New Reddit post from $http.get()',
+          'Twitter status update message from $http.get()',
+          'New Reddit post from $http.get()'
+        ];
       }
     }
 
