@@ -3,10 +3,10 @@
 
   angular
     .module('poppygp.layout')
-    .controller('ViewController', ViewController);
+    .controller('MainController', MainController);
 
   /** @ngInject */
-  function ViewController($log) {
+  function MainController($log) {
     var vm = this;
 
     vm.layoutState = 0;
@@ -15,8 +15,9 @@
 
     function activate() {
       vm.layoutState = 1;
-      $log.info('ViewController activated.');
+      $log.info('MainController activated.');
     }
 
   }
+
 })();

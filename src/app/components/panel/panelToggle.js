@@ -2,11 +2,11 @@
   'use strict';
 
   angular
-    .module('poppygp.layout')
-    .directive('contentPanelToggle', contentPanelToggleDirective);
+    .module('poppygp.components')
+    .directive('gpPanelToggle', gpPanelToggleDirective);
 
   /* @ngInject */
-  function contentPanelToggleDirective() {
+  function gpPanelToggleDirective() {
 
     var directive = {
       link: link,
@@ -18,13 +18,13 @@
     function link(scope, element, attrs) {
 
       // grab <gp-content-panel> element
-      var $contentPanel = element.parent().find('.gp-content-panel');
+      var $panel = element.parent().find('.gp-content-panel');
 
       element.click(toggleContentPanel);
 
       function toggleContentPanel(e) {
 
-        if($contentPanel.hasClass('gp-hide')) {
+        if($panel.hasClass('gp-hide')) {
 
         }
         else {

@@ -2,16 +2,16 @@
   'use strict';
 
   angular
-    .module('poppygp.layout')
-    .directive('gpVideoPlayer', gpVideoPlayerDirective);
+    .module('poppygp.components')
+    .directive('gpPlayer', gpPlayerDirective);
 
   /* @ngInject */
-  function gpVideoPlayerDirective() {
+  function gpPlayerDirective() {
     return {
       restrict: 'E',
       replace: true,
       transclude: true,
-      templateUrl: 'app/layout/videoPlayer/videoPlayer.html',
+      templateUrl: 'app/components/player/player.html',
       scope: {
         channelId : '=*?channelId',
         version   : '=*?playerVersion'

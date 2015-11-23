@@ -2,26 +2,25 @@
   'use strict';
 
   angular
-    .module('poppygp.layout')
-    .directive('gpContentPanel', gpContentPanelDirective);
+    .module('poppygp.components')
+    .directive('gpPanel', gpPanelDirective);
 
   /** @ngInject */
-  function gpContentPanelDirective($window) {
+  function gpPanelDirective($window, $log) {
     var directive = {
       restrict: 'E',
-      templateUrl: 'app/components/contentPanel/contentPanel.html',
+      templateUrl: 'app/components/panel/panel.html',
       scope: {
 
       },
-      controller: ContentPanelController,
+      controller: PanelController,
       controllerAs: 'vm'
     };
 
     return directive;
 
     /** @ngInject */
-    function ContentPanelController() {
-      var self = this;
+    function PanelController() {
       var viewport;
 
       angular.extend(this, {
@@ -30,7 +29,7 @@
           viewport.width  = $window.innerWidth;   // $(window).width();
           viewport.height = $window.innerHeight;  // $(window).height();
           viewport.ratio  = viewport.width / viewport.height;
-          logger.info('Viewport Information: ' + JSON.stringify(viewport));
+          $log.info('Viewport Information: ' + viewport.toJson());
         }
       });
     }

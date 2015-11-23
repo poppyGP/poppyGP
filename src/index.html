@@ -135,7 +135,7 @@
 
 
 
-<body ng-controller="MainController as main">
+<body>
 
 
 
@@ -204,40 +204,10 @@
 
 
 
-
-  <!-- Main Section
+  <!-- Main Container
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-  <div id="main">
-
-
-
-
-    <!-- Video Player
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-
-    <div id="video-wrapper">
-      <gp-video-player channel-id="20560398">
-
-      </gp-video-player>
-    </div>
-
-    <!-- ––––––––––––––––––––––––––––––––––––––––––––– -->
-
-
-    <!-- Content Panel
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-
-    <div id="panel-wrapper">
-
-    </div>
-
-    <!-- ––––––––––––––––––––––––––––––––––––––––––––– -->
-
-
-
-
-  </div>
+  <div id="main" ui-view ng-cloak></div>
 
   <!-- end main container –––––––––––––––––––––––––– -->
 

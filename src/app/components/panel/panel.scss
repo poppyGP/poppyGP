@@ -18,7 +18,7 @@
   // SEE:
   //
   //
-gp-content-panel {
+gp-panel {
   background: #000;
   border-right: 1px solid #ccc;
   height: 100%;
@@ -26,7 +26,7 @@ gp-content-panel {
   overflow-y: auto;
 }
 @media (min-width: 768px) {
-  gp-content-panel {
+  gp-panel {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -38,11 +38,11 @@ gp-content-panel {
 }
 
 
-gp-content-panel.gp-show.ng-hide-remove {
+gp-panel.gp-show.ng-hide-remove {
   animation: $swift-ease-in;
 }
 
-gp-content-panel.gp-hide.ng-hide-add {
+gp-panel.gp-hide.ng-hide-add {
   animation: $swift-ease-out;
 }
 
