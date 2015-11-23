@@ -1,15 +1,34 @@
 /**
- * This file uses the Page Object pattern to define the main page for tests
+ * Main Page Object
+ *
  * https://docs.google.com/presentation/d/1B6manhG0zEXkC-H-tPo2vwU06JhL8w9-XCF9oehXzAQ
  */
 
 'use strict';
 
+
+
+
+/* Main Page
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
 var MainPage = function() {
-  this.jumbEl = element(by.css('.jumbotron'));
-  this.h1El = this.jumbEl.element(by.css('h1'));
-  this.imgEl = this.jumbEl.element(by.css('img'));
-  this.thumbnailEls = element(by.css('body')).all(by.repeater('awesomeThing in main.awesomeThings'));
+
+
+  //  Layout Elements
+  // ------------------------------
+
+  this.navbar = element(by.css('.navbar'));
+  //this.player = element(by.css('.gp-video-player'));
+  this.subnav = element(by.css('.subnav'));
+
+
+  //  Element Wrappers
+  // ------------------------------
+
+  this.videoWrapper = element(by.css('#video-wrapper'));
+  this.panelWrapper = element(by.css('#panel-wrapper'));
+
 };
 
 module.exports = new MainPage();

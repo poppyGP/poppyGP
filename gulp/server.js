@@ -40,7 +40,8 @@ function browserSyncInit(baseDir, browser) {
   browserSync.instance = browserSync.init({
     startPath: '/',
     server: server,
-    browser: browser
+    browser: browser,
+    reloadDelay: 1000
   }, function(err, bs) {
     qrcode.generate(bs.options.get('urls').get('external'));
   });

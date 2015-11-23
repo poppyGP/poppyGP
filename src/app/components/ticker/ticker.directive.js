@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('poppygp')
+    .module('poppygp.components')
     .directive('gpTicker', gpTickerDirective);
 
   /** @ngInject */

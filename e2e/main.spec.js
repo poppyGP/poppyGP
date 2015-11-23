@@ -1,6 +1,12 @@
 'use strict';
 
+
+
+
+/* Main Page View
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 describe('The main view', function () {
+
   var page;
 
   beforeEach(function () {
@@ -8,14 +14,29 @@ describe('The main view', function () {
     page = require('./main.po');
   });
 
-  it('should include jumbotron with correct data', function() {
-    expect(page.h1El.getText()).toBe('\'Allo, \'Allo!');
-    expect(page.imgEl.getAttribute('src')).toMatch(/assets\/images\/yeoman.png$/);
-    expect(page.imgEl.getAttribute('alt')).toBe('I\'m Yeoman');
+
+
+
+  /* Page Layout Elements
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+  it('should have navbar and subnav', function() {
+    expect(page.navbar).isPresent()).toBe(true);
+    expect(page.subnav).isPresent()).toBe(true);
   });
 
-  it('should list more than 5 awesome things', function () {
-    expect(page.thumbnailEls.count()).toBeGreaterThan(5);
+
+
+
+  /* Page Element Wrappers
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+  it('should should have video and panel wrappers', function () {
+    expect(page.videoWrapper).isPresent()).toBe(true);
+    expect(page.panelWrapper).isPresent()).toBe(true);
   });
+
+
+
 
 });
