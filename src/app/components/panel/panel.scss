@@ -18,31 +18,50 @@
   // SEE:
   //
   //
-gp-panel {
-  background: #000;
+.gp-panel {
+  background: #f00;
+  color: #fff;
   border-right: 1px solid #ccc;
   height: 100%;
+  width: 100%;
   overflow-x: hidden;
   overflow-y: auto;
 }
 @media (min-width: 768px) {
-  gp-panel {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1000;
-    display: block;
-    padding: 20px;
+  .gp-panel {
+
   }
 }
 
+.gp-panel-toggle {
+  min-height: 64px;
+  min-width: 64;
+  position: absolute;
+  top: 128px;
+  left: 0;
+  z-index: 1000;
+  background: #0ff;
+  color: #fff;
+}
 
-gp-panel.gp-show.ng-hide-remove {
+
+.gp-panel.animate.ng-hide-remove {
   animation: $swift-ease-in;
 }
 
-gp-panel.gp-hide.ng-hide-add {
+.gp-panel.animate.ng-hide-add {
   animation: $swift-ease-out;
 }
 
+.gp-show-add, .gp-show-remove {
+  transition: $swift-ease-in-out;
+}
+
+.gp-show-add.gp-show-add-active {
+  -webkit-transform: translate3d(0);
+}
+
+.gp-show-remove.gp-show-remove-active {
+  font-size:1.0em;
+  color:black;
+}

@@ -244,19 +244,19 @@ $device-breakpoints: (
 // Stack Vertical on Mobile Portrait
 // ------------------------------
 
-$panel-wrapper-height-xs: 40%;
-$video-wrapper-height-xs: (100% - $panel-wrapper-height-xs);
+$side-wrapper-height-xs: 40%;
+$main-wrapper-height-xs: (100% - $side-wrapper-height-xs);
 
 
 // Side-by-Side on Landscape/Screens
 // ------------------------------
 
-$panel-wrapper-width-sm:  33%;
-$video-wrapper-width-sm:  (100% - $panel-wrapper-width-sm);
-$panel-wrapper-width-md:  30%;
-$video-wrapper-width-md:  (100% - $panel-wrapper-width-md);
-$panel-wrapper-width-lg:  25%;
-$video-wrapper-width-lg:  (100% - $panel-wrapper-width-lg);
+$side-wrapper-width-sm:  33%;
+$main-wrapper-width-sm:  (100% - $side-wrapper-width-sm);
+$side-wrapper-width-md:  30%;
+$main-wrapper-width-md:  (100% - $side-wrapper-width-md);
+$side-wrapper-width-lg:  25%;
+$main-wrapper-width-lg:  (100% - $side-wrapper-width-lg);
 
 
 /* ––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -271,18 +271,18 @@ $video-wrapper-width-lg:  (100% - $panel-wrapper-width-lg);
 /* Responsive Wrappers
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-#main {
-  background: #000;
+#page-wrapper {
+  background: #fff;
   overflow: hidden;
   height: 100%;
   width: 100%;
-  padding-top: $navbar-height;
-  padding-bottom: $subnav-height;
+  //padding-top: $navbar-height;
+  //padding-bottom: $subnav-height;
   margin: 0;
   position: relative;
 }
 
-#video-wrapper, #panel-wrapper {
+#main-wrapper, #side-wrapper {
   padding: 0;
   margin: 0;
   position: relative;
@@ -290,50 +290,49 @@ $video-wrapper-width-lg:  (100% - $panel-wrapper-width-lg);
   width: 100%;
 }
 
-#video-wrapper {
-  background: #ccc;
-  overflow: hidden;
-  height: $video-wrapper-height-xs;
-
-
-}
-#panel-wrapper {
+#main-wrapper {
   background: #222;
+  overflow: hidden;
+  height: $main-wrapper-height-xs;
+}
+
+#side-wrapper {
+  background: #000;
   overflow-x: hidden;
   overflow-y: auto;
-  height: $panel-wrapper-height-xs;
+  height: $side-wrapper-height-xs;
 }
 
 
 @media (min-width: $screen-sm-min) {
-  #video-wrapper {
+  #main-wrapper {
     height: 100%;
-    width: $video-wrapper-width-sm;
+    width: $main-wrapper-width-sm;
   }
-  #panel-wrapper {
+  #side-wrapper {
     float: right;
     height: 100%;
-    width: $panel-wrapper-width-sm;
+    width: $side-wrapper-width-sm;
   }
 }
 @media (min-width: $screen-md-min) {
-  #video-wrapper {
-    width: $video-wrapper-width-md;
+  #main-wrapper {
+    width: $main-wrapper-width-md;
   }
-  #panel-wrapper {
-    width: $panel-wrapper-width-md;
+  #side-wrapper {
+    width: $side-wrapper-width-md;
   }
 }
 @media (min-width: $screen-lg-min) {
-  #video-wrapper {
-    width: $video-wrapper-width-lg;
+  #main-wrapper {
+    width: $main-wrapper-width-lg;
   }
-  #panel-wrapper {
-    width: $panel-wrapper-width-lg;
+  #side-wrapper {
+    width: $side-wrapper-width-lg;
   }
 }
 
-#video-wrapper2 {
+#main-wrapper2 {
   overflow: hidden;
   height: 50%;
   width: 100%;
@@ -354,7 +353,7 @@ $video-wrapper-width-lg:  (100% - $panel-wrapper-width-lg);
   }
 }
 
-#panel-wrapper2 {
+#side-wrapper2 {
   background: #222;
   overflow-y: auto;
   overflow-x: hidden;

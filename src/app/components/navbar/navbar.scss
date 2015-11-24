@@ -12,9 +12,6 @@
   color: $subnav-color;
 
 
-  @media (min-width: $grid-float-breakpoint) {
-    border-radius: $subnav-border-radius;
-  }
 
   .navbar-nav {
     > li > a {
@@ -72,7 +69,7 @@
       }
     }
 
-    @media (max-width: $grid-float-breakpoint-max) {
+    /*@media (max-width: $grid-float-breakpoint-max) {
       // Dropdowns get custom display when collapsed
       .open .dropdown-menu {
         > li > a {
@@ -100,7 +97,7 @@
           }
         }
       }
-    }
+    }*/
   }
 
 
@@ -136,7 +133,7 @@
 
   .navbar-header {
 
-    margin: ($subnav-padding-vertical / 2) (-$subnav-padding-horizontal);
+    //margin: ($subnav-padding-vertical / 2) (-$subnav-padding-horizontal);
 
     .navbar-brand {
 
@@ -171,9 +168,9 @@
     .navbar-collapse {
       max-height: $subnav-collapse-max-height;
 
-      @media (max-device-width: $screen-xs-min) and (orientation: landscape) {
-        max-height: 200px;
-      }
+      //@media (max-device-width: $screen-xs-min) and (orientation: landscape) {
+      //  max-height: 200px;
+      //}
     }
   }
 
@@ -199,14 +196,14 @@
   // bottom of the page.
 
   // Static top (unfixed, but 100% wide) subnav
-  &.navbar-static-top {
-    z-index: $zindex-subnav;
-    border-width: 0 0 1px;
-
-    @media (min-width: $grid-float-breakpoint) {
-      border-radius: 0;
-    }
-  }
+  // &.navbar-static-top {
+  //   z-index: $zindex-subnav;
+  //   border-width: 0 0 1px;
+//
+  //   @media (min-width: $grid-float-breakpoint) {
+  //     border-radius: 0;
+  //   }
+  // }
 
   // Fix the top/bottom subnavs when screen real estate supports it
   &.navbar-fixed-top,
@@ -214,12 +211,9 @@
     position: fixed;
     right: 0;
     left: 0;
-    z-index: $zindex-subnav-fixed;
+    z-index: $zindex-navbar-fixed;
 
-    // Undo the rounded corners
-    @media (min-width: $grid-float-breakpoint) {
-      border-radius: 0;
-    }
+
   }
   &.navbar-fixed-top {
     top: $navbar-height;
@@ -240,7 +234,7 @@
   .navbar-toggle {
     margin-right: $subnav-padding-horizontal;
     padding: 4px 8px;
-    @include navbar-vertical-align(17px);
+    //@include navbar-vertical-align(17px);
 
     // Bars
     .icon-bar {
@@ -266,10 +260,10 @@
     > li > a {
       padding-top:    4px;
       padding-bottom: 4px;
-      line-height: ceil($line-height-computed * 0.5);
+      //line-height: ceil($line-height-computed * 0.5);
     }
 
-    @media (max-width: $grid-float-breakpoint-max) {
+    /*@media (max-width: $grid-float-breakpoint-max) {
       // Dropdowns get custom display when collapsed
       .open .dropdown-menu {
         > li > a,
@@ -288,7 +282,7 @@
         padding-top:    $subnav-padding-vertical;
         padding-bottom: $subnav-padding-vertical;
       }
-    }
+    }*/
 
   }
 
@@ -304,10 +298,10 @@
     //@include navbar-vertical-align($input-height-small);
 
     &.btn-sm {
-      @include navbar-vertical-align($input-height-small);
+      //@include navbar-vertical-align($input-height-small);
     }
     &.btn-xs {
-      @include navbar-vertical-align(22);
+      //@include navbar-vertical-align(22);
     }
   }
 
@@ -317,12 +311,12 @@
   // Add a class to make any element properly align itself vertically within the subnavs.
 
   .navbar-text {
-    @include navbar-vertical-align(ceil($line-height-computed * 0.5));
+    //@include navbar-vertical-align(ceil($line-height-computed * 0.5));
 
-    @media (min-width: $grid-float-breakpoint) {
-      margin-left: $subnav-padding-horizontal;
-      margin-right: $subnav-padding-horizontal;
-    }
+    //@media (min-width: $grid-float-breakpoint) {
+    //  margin-left: $subnav-padding-horizontal;
+    //  margin-right: $subnav-padding-horizontal;
+    //}
   }
 
 
@@ -334,10 +328,10 @@
   //
   // Declared after the subnav components to ensure more specificity on the margins.
 
-  @media (min-width: $grid-float-breakpoint) {
-    .navbar-right {
-      margin-right: -$subnav-padding-horizontal;
-    }
-  }
+  //@media (min-width: $grid-float-breakpoint) {
+  //  .navbar-right {
+  //    margin-right: -$subnav-padding-horizontal;
+  //  }
+  //}
 
 }
