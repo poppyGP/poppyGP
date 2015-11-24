@@ -6,13 +6,12 @@
     .directive('gpPanel', gpPanelDirective);
 
   /** @ngInject */
-  function gpPanelDirective($window, $log) {
+  function gpPanelDirective($window) {
     var directive = {
       restrict: 'E',
       templateUrl: 'app/components/panel/panel.html',
-      scope: {
-
-      },
+      transclude: true,
+      replace: false,
       controller: PanelController,
       controllerAs: 'vm'
     };
@@ -21,17 +20,22 @@
 
     /** @ngInject */
     function PanelController() {
-      var viewport;
+      var vm = this;
+      var viewport = {};
 
       angular.extend(this, {
-        visible: false,
+        visible: true,
         toggle: function() {
           viewport.width  = $window.innerWidth;   // $(window).width();
           viewport.height = $window.innerHeight;  // $(window).height();
           viewport.ratio  = viewport.width / viewport.height;
-          $log.info('Viewport Information: ' + viewport.toJson());
+
+          vm.visible = !vm.visible;
+          vm.animate = true;
+          //$log.info('Viewport Information: ' + viewport.toJson());
         }
       });
+
     }
   }
 

@@ -9,20 +9,22 @@
   function gpPanelToggleDirective() {
 
     var directive = {
+      requires: '^gpPanel',
       link: link,
-      template: '<i class="fa fa-remove"></i>',
-      restrict: 'A'
+      templateUrl: 'app/components/panel/panelToggle.html',
+      restrict: 'E'
     };
     return directive;
 
     function link(scope, element, attrs) {
 
       // grab <gp-content-panel> element
-      var $panel = element.parent().find('.gp-content-panel');
+      var $panel = element.parent().find('.gp-panel');
 
       element.click(toggleContentPanel);
 
       function toggleContentPanel(e) {
+
 
         if($panel.hasClass('gp-hide')) {
 
