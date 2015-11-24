@@ -5,6 +5,72 @@
 
 
 
+/* Flexbox Structure
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+$baseline-grid:             8px;
+$layout-gutter-width:       ($baseline-grid * 2);
+
+$layout-breakpoint-xs:      480px;
+$layout-breakpoint-sm:      600px;
+$layout-breakpoint-md:      960px;
+$layout-breakpoint-lg:      1200px;
+$layout-breakpoint-xl:      1600px;
+
+$device-mobile-portrait:    0;
+$device-mobile-landscape:   0;
+$device-phablet-portrait:   0;
+$device-phablet-landscape:  0;
+$device-tablet-portrait:    0;
+$device-tablet-landscape:   0;
+
+
+// Mobile Portrait
+// ------------------------------
+
+@media only screen
+  and (max-width: $layout-breakpoint-xs - 1)
+  and (orientation: portrait) {
+
+}
+
+
+// Mobile Landscape
+// ------------------------------
+
+@media only screen
+  and (min-width: $layout-breakpoint-xs)
+  and (max-width: $layout-breakpoint-md)
+  and (orientation: landscape) {
+
+}
+
+
+// Tablet Portrait
+// ------------------------------
+
+@media only screen
+  and (min-width: $layout-breakpoint-sm)
+  and (orientation: portrait) {
+
+}
+
+
+// Tablet Landscape
+// ------------------------------
+
+@media only screen
+  and (min-width: $layout-breakpoint-md)
+  and (max-width: $layout-breakpoint-lg)
+  and (orientation: landscape) {
+
+}
+
+
+
+
+
+
 /* Angular-Material Animations
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 

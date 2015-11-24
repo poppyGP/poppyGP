@@ -1,3 +1,10 @@
+/**
+ * Modified Flexbox-based layout system from Angular-Material
+ *
+ * @author  Jonathan Ho <joho@joho.io>
+ */
+
+
 /*
 * This file is used to generate a 'standalone' version of the LAYOUT css with attribute selectors.
 * This does NOT require the angular-material.js code... rather the raw attribute selectors are used.
@@ -16,12 +23,10 @@
 */
 
 
-$baseline-grid:           8px !default;
-$layouer-breakpoint-xs:   480px;
-$layout-breakpoint-sm:    600px !default;
-$layout-breakpoint-md:    960px !default;
-$layout-breakpoint-lg:    1200px !default;
-$layout-gutter-width:     ($baseline-grid * 2) !default;
+
+
+/* Mozilla
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 
 @-moz-document url-prefix() {
@@ -34,8 +39,12 @@ $layout-gutter-width:     ($baseline-grid * 2) !default;
 }
 
 
-@mixin flex-order-for-name($sizes:null) {
 
+
+/* Generate `flex-order-` Attributes
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@mixin flex-order-for-name($sizes:null) {
 
   @if $sizes == null {
     $sizes : '';
@@ -63,6 +72,13 @@ $layout-gutter-width:     ($baseline-grid * 2) !default;
     }
   }
 }
+
+
+
+
+/* Generate `flex-offset-` Attributes
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
 @mixin offset-for-name($sizes:null) {
 
   @if $sizes == null { $sizes : ''; }
@@ -124,6 +140,13 @@ $layout-gutter-width:     ($baseline-grid * 2) !default;
   }
 
 }
+
+
+
+
+/* Generate Row/Column Layout
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
 @mixin layout-for-name($name: null) {
   @if $name == null { $name : '';          }
   @else             { $name : '-#{$name}'; }
@@ -144,6 +167,13 @@ $layout-gutter-width:     ($baseline-grid * 2) !default;
     flex-wrap: wrap;  // auto-wrap
   }
 }
+
+
+
+
+/* Generate Flex Types
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
 @mixin flex-properties-for-name($name: null) {
   $flexName: 'flex';
   @if $name != null {
@@ -193,6 +223,12 @@ $layout-gutter-width:     ($baseline-grid * 2) !default;
     > [#{$flexName}="66"], > [#{$flexName}="67"], {  max-width: 100%;  max-height: 67%; }
   }
 }
+
+
+
+
+/* Layout Align
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 @mixin layout-align-for-name($suffix: null) {
 
@@ -282,29 +318,34 @@ $layout-gutter-width:     ($baseline-grid * 2) !default;
   }
 }
 
+
+
+
+/* Layout Padding/Margin
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
 @mixin layout-padding-margin() {
 
-  [layout-padding] > [flex-sm], [layout-padding] > [flex-lt-md]
-  {
+  [layout-padding] > [flex-sm],
+  [layout-padding] > [flex-lt-md] {
     padding: $layout-gutter-width / 4;
   }
+
   [layout-padding],
   [layout-padding] > [flex],
   [layout-padding] > [flex-gt-sm],
   [layout-padding] > [flex-md],
-  [layout-padding] > [flex-lt-lg]
-  {
+  [layout-padding] > [flex-lt-lg] {
     padding: $layout-gutter-width / 2;
   }
+
   [layout-padding] > [flex-gt-md],
-  [layout-padding] > [flex-lg]
-  {
+  [layout-padding] > [flex-lg] {
     padding: $layout-gutter-width / 1;
   }
 
   [layout-margin] >  [flex-sm],
-  [layout-margin] >  [flex-lt-md]
-  {
+  [layout-margin] >  [flex-lt-md] {
     margin: $layout-gutter-width / 4;
   }
 
@@ -312,14 +353,12 @@ $layout-gutter-width:     ($baseline-grid * 2) !default;
   [layout-margin] >  [flex],
   [layout-margin] >  [flex-gt-sm],
   [layout-margin] >  [flex-md],
-  [layout-margin] >  [flex-lt-lg]
-  {
+  [layout-margin] >  [flex-lt-lg] {
     margin: $layout-gutter-width / 2;
   }
 
   [layout-margin] >  [flex-gt-md],
-  [layout-margin] >  [flex-lg]
-  {
+  [layout-margin] >  [flex-lg] {
     margin: $layout-gutter-width / 1;
   }
 
@@ -360,6 +399,10 @@ $layout-gutter-width:     ($baseline-grid * 2) !default;
 
 
 
+
+/* Show/Hide Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
 /**
  * `hide-gt-sm show-gt-lg` should hide from 600px to 1200px
  * `show-md hide-gt-sm` should show from 0px to 960px and hide at >960px
@@ -372,6 +415,9 @@ $layout-gutter-width:     ($baseline-grid * 2) !default;
  *         960  <= size < 1200 Tablet-Landscape
  */
 
+
+//
+// ------------------------------
 
 @media (max-width: $layout-breakpoint-sm - 1) {
   // SMALL SCREEN
