@@ -276,8 +276,7 @@ $main-wrapper-width-lg:  (100% - $side-wrapper-width-lg);
   overflow: hidden;
   height: 100%;
   width: 100%;
-  //padding-top: $navbar-height;
-  //padding-bottom: $subnav-height;
+  padding-top: $navbar-height;
   margin: 0;
   position: relative;
 }
@@ -304,7 +303,7 @@ $main-wrapper-width-lg:  (100% - $side-wrapper-width-lg);
 }
 
 
-@media (min-width: $screen-sm-min) {
+@include media-breakpoint-up(sm) {
   #main-wrapper {
     height: 100%;
     width: $main-wrapper-width-sm;
@@ -315,7 +314,7 @@ $main-wrapper-width-lg:  (100% - $side-wrapper-width-lg);
     width: $side-wrapper-width-sm;
   }
 }
-@media (min-width: $screen-md-min) {
+@include media-breakpoint-up(md) {
   #main-wrapper {
     width: $main-wrapper-width-md;
   }
@@ -323,7 +322,7 @@ $main-wrapper-width-lg:  (100% - $side-wrapper-width-lg);
     width: $side-wrapper-width-md;
   }
 }
-@media (min-width: $screen-lg-min) {
+@include media-breakpoint-up(lg) {
   #main-wrapper {
     width: $main-wrapper-width-lg;
   }
@@ -336,15 +335,15 @@ $main-wrapper-width-lg:  (100% - $side-wrapper-width-lg);
   overflow: hidden;
   height: 50%;
   width: 100%;
-  @media (min-width: $screen-sm-min) {
+  @include media-breakpoint-up(sm) {
 
   }
-  @media (min-width: $screen-md-min) {
+  @include media-breakpoint-up(md) {
     float: left;
     height: 100%;
     width: auto;
   }
-  @media (min-width: $screen-lg-min) {
+  @include media-breakpoint-up(lg) {
 
   }
   padding: 0;
@@ -359,13 +358,13 @@ $main-wrapper-width-lg:  (100% - $side-wrapper-width-lg);
   overflow-x: hidden;
   //height: $container-panel-height;
   width: 100%;
-  @media (min-width: $screen-sm-min) {
+  @include media-breakpoint-up(sm) {
   }
-  @media (min-width: $screen-md-min) {
+  @include media-breakpoint-up(md) {
     height: 100%;
   //  width: $container-panel-width-md;
   }
-  @media (min-width: $screen-lg-min) {
+  @include media-breakpoint-up(lg) {
     height: 100%;
   //  width: $container-panel-width-lg;
   }

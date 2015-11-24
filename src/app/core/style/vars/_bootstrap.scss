@@ -25,13 +25,13 @@
 // ------------------------------
 // Quickly modify global styling by enabling or disabling optional features.
 
-$enable-flex:               false !default;
-$enable-rounded:            true !default;
-$enable-shadows:            false !default;
-$enable-gradients:          false !default;
-$enable-transitions:        false !default;
-$enable-hover-media-query:  false !default;
-$enable-grid-classes:       true !default;
+$enable-flex:               true;
+$enable-rounded:            false;
+$enable-shadows:            true;
+$enable-gradients:          true;
+$enable-transitions:        true;
+$enable-hover-media-query:  true;
+$enable-grid-classes:       false;
 
 
 // Spacing

@@ -2,6 +2,6 @@
   'use strict';
 
   angular
-    .module('poppygp.components', ['ngAnimate']);
+    .module('poppygp.components', []);
 
 })();
