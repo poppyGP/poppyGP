@@ -9,14 +9,14 @@
   function gpPlayerDirective() {
     return {
       restrict: 'E',
-      replace: true,
       transclude: true,
       templateUrl: 'app/components/player/player.html',
       scope: {
-        channelId : '=*?channelId',
-        version   : '=*?playerVersion'
+        channelId   : '=*?channelId',
+        version     : '=*?playerVersion',
+        aspectRatio : '=*?aspectRatio'
       },
-      link: function(scope) {
+      link: function(scope, element) {
         scope.videoSrc = 'http://www.ustream.tv/embed/' + scope.channelId + '?';
         // Use Old Player
         if(scope.version === 'old') {
@@ -26,6 +26,17 @@
         else {
           scope.videoSrc += 'html5ui=1&controls=false&showtitle=false';
         }
+
+        // ------------------------------
+        // TODO: Handle Aspect Ratio
+        // ------------------------------
+        if(scope.aspectRatio === '16-9') {
+          element.addClass('widescreen');
+        }
+        else if(scope.aspectRatio === '21-9') {
+          element.addClass('cinematic')
+        }
+
       }
     };
   }
