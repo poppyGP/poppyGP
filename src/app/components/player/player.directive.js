@@ -30,11 +30,8 @@
         // ------------------------------
         // TODO: Handle Aspect Ratio
         // ------------------------------
-        if(scope.aspectRatio === '16-9') {
-          element.addClass('widescreen');
-        }
-        else if(scope.aspectRatio === '21-9') {
-          element.addClass('cinematic')
+        if(scope.aspectRatio) {
+          element.addClass('ratio-' + scope.aspectRatio);
         }
 
       }
