@@ -27,7 +27,7 @@
 $flexvideo-padding-top:     rem-calc(25);
 $flexvideo-padding-bottom:  67.5%;
 $flexvideo-margin-bottom:   rem-calc(16);
-$flexvideo-margin-top:      $navbar-height;
+$flexvideo-margin-top:      0; // $navbar-height;
 
 // $flex-video-widescreen-padding-bottom: 57.25%;
 
@@ -108,6 +108,9 @@ gp-player {
 
   &.vimeo {
     padding-top: 0;
+  }
+
+  >.gp-video-player {
   }
 }
 
