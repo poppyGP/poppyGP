@@ -10,7 +10,7 @@
     var directive = {
       restrict: 'E',
       transclude: true,
-      replace: true,
+      replace: false,
       templateUrl: 'app/components/navbar/navbar.html'
     };
 
