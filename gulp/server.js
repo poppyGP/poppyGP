@@ -42,8 +42,6 @@ function browserSyncInit(baseDir, browser) {
     server: server,
     browser: browser,
     reloadDelay: 1000
-  }, function(err, bs) {
-    qrcode.generate(bs.options.get('urls').get('external'));
   });
 }
 
