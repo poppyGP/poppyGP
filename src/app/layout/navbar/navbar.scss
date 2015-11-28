@@ -1,0 +1,343 @@
+.navbar {
+  margin-bottom: 0;
+
+}
+
+
+.navbar.subnav {
+  min-height: $subnav-height;
+  height: $subnav-height;
+  background-color: $subnav-bg;
+  border: 1px solid $subnav-border;
+  color: $subnav-color;
+
+
+  @media (min-width: $grid-float-breakpoint) {
+    border-radius: $subnav-border-radius;
+  }
+
+  .navbar-nav {
+    > li > a {
+      color: $subnav-link-color;
+
+      &:hover,
+      &:focus {
+        color: $subnav-link-hover-color;
+        background-color: $subnav-link-hover-bg;
+      }
+    }
+    > .active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: $subnav-link-active-color;
+        background-color: $subnav-link-active-bg;
+      }
+    }
+    > .disabled > a {
+      &,
+      &:hover,
+      &:focus {
+        color: $subnav-link-disabled-color;
+        background-color: $subnav-link-disabled-bg;
+      }
+    }
+  }
+
+  .navbar-toggle {
+    border-color: $subnav-toggle-border-color;
+    &:hover,
+    &:focus {
+      background-color: $subnav-toggle-hover-bg;
+    }
+    .icon-bar {
+      background-color: $subnav-toggle-icon-bar-bg;
+    }
+  }
+
+  .navbar-collapse,
+  .navbar-form {
+    border-color: $subnav-border;
+  }
+
+  // Dropdown menu items
+  .navbar-nav {
+    // Remove background color from open dropdown
+    > .open > a {
+      &,
+      &:hover,
+      &:focus {
+        background-color: $subnav-link-active-bg;
+        color: $subnav-link-active-color;
+      }
+    }
+
+    @media (max-width: $grid-float-breakpoint-max) {
+      // Dropdowns get custom display when collapsed
+      .open .dropdown-menu {
+        > li > a {
+          color: $subnav-link-color;
+          &:hover,
+          &:focus {
+            color: $subnav-link-hover-color;
+            background-color: $subnav-link-hover-bg;
+          }
+        }
+        > .active > a {
+          &,
+          &:hover,
+          &:focus {
+            color: $subnav-link-active-color;
+            background-color: $subnav-link-active-bg;
+          }
+        }
+        > .disabled > a {
+          &,
+          &:hover,
+          &:focus {
+            color: $subnav-link-disabled-color;
+            background-color: $subnav-link-disabled-bg;
+          }
+        }
+      }
+    }
+  }
+
+
+  // Links in subnavs
+  //
+  // Add a class to ensure links outside the subnav nav are colored correctly.
+
+  .navbar-link {
+    color: $subnav-link-color;
+    &:hover {
+      color: $subnav-link-hover-color;
+    }
+  }
+
+  .btn-link {
+    color: $subnav-link-color;
+    &:hover,
+    &:focus {
+      color: $subnav-link-hover-color;
+    }
+    &[disabled],
+    fieldset[disabled] & {
+      &:hover,
+      &:focus {
+        color: $subnav-link-disabled-color;
+      }
+    }
+  }
+  // Subnav heading
+  //
+  // Groups `.navbar-brand` and `.navbar-toggle` into a single component for easy
+  // styling of responsive aspects.
+
+  .navbar-header {
+
+    margin: ($subnav-padding-vertical / 2) (-$subnav-padding-horizontal);
+
+    .navbar-brand {
+
+      color: $subnav-brand-color;
+      &:hover,
+      &:focus {
+        color: $subnav-brand-hover-color;
+        background-color: $subnav-brand-hover-bg;
+      }
+    }
+  }
+
+
+  // Subnav collapse (body)
+  //
+  // Group your subnav content into this for easy collapsing and expanding across
+  // various device sizes. By default, this content is collapsed when <768px, but
+  // will expand past that for a horizontal display.
+  //
+  // To start (on mobile devices) the subnav links, forms, and buttons are stacked
+  // vertically and include a `max-height` to overflow in case you have too much
+  // content for the user's viewport.
+
+  .navbar-collapse {
+    padding-right: $subnav-padding-horizontal;
+    padding-left:  $subnav-padding-horizontal;
+  }
+
+
+  &.navbar-fixed-top,
+  &.navbar-fixed-bottom {
+    .navbar-collapse {
+      max-height: $subnav-collapse-max-height;
+
+      @media (max-device-width: $screen-xs-min) and (orientation: landscape) {
+        max-height: 200px;
+      }
+    }
+  }
+
+
+  // Both subnav header and collapse
+  //
+  // When a container is present, change the behavior of the header and collapse.
+
+  .container,
+  .container-fluid {
+    > .navbar-header,
+    > .navbar-collapse {
+      margin-right: -$subnav-padding-horizontal;
+      margin-left:  -$subnav-padding-horizontal;
+    }
+  }
+
+
+  //
+  // Subnav alignment options
+  //
+  // Display the subnav across the entirety of the page or fixed it to the top or
+  // bottom of the page.
+
+  // Static top (unfixed, but 100% wide) subnav
+  &.navbar-static-top {
+    z-index: $zindex-subnav;
+    border-width: 0 0 1px;
+
+    @media (min-width: $grid-float-breakpoint) {
+      border-radius: 0;
+    }
+  }
+
+  // Fix the top/bottom subnavs when screen real estate supports it
+  &.navbar-fixed-top,
+  &.navbar-fixed-bottom {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: $zindex-subnav-fixed;
+
+    // Undo the rounded corners
+    @media (min-width: $grid-float-breakpoint) {
+      border-radius: 0;
+    }
+  }
+  &.navbar-fixed-top {
+    top: $navbar-height;
+    border-width: 0 0 1px;
+  }
+  &.navbar-fixed-bottom {
+    bottom: 0;
+    margin-bottom: 0; // override .subnav defaults
+    border-width: 1px 0 0;
+  }
+
+
+  // Subnav toggle
+  //
+  // Custom button for toggling the `.navbar-collapse`, powered by the collapse
+  // JavaScript plugin.
+
+  .navbar-toggle {
+    margin-right: $subnav-padding-horizontal;
+    padding: 4px 8px;
+    @include navbar-vertical-align(17px);
+
+    // Bars
+    .icon-bar {
+      display: block;
+      width: 22px;
+      height: 2px;
+      border-radius: 1px;
+    }
+    .icon-bar + .icon-bar {
+      margin-top: 2px;
+    }
+  }
+
+
+  // Subnav nav links
+  //
+  // Builds on top of the `.nav` components with its own modifier class to make
+  // the nav the full height of the horizontal nav (above 768px).
+
+  .navbar-nav {
+    margin: ($subnav-padding-vertical / 2) (-$subnav-padding-horizontal);
+
+    > li > a {
+      padding-top:    4px;
+      padding-bottom: 4px;
+      line-height: ceil($line-height-computed * 0.5);
+    }
+
+    @media (max-width: $grid-float-breakpoint-max) {
+      // Dropdowns get custom display when collapsed
+      .open .dropdown-menu {
+        > li > a,
+        .dropdown-header {
+          padding: 3px 8px 3px 12px; // 5px 15px 5px 25px;
+        }
+        > li > a {
+          line-height: ceil($line-height-computed * 0.5);
+        }
+      }
+    }
+
+    // Uncollapse the nav
+    @media (min-width: $grid-float-breakpoint) {
+      > li > a {
+        padding-top:    $subnav-padding-vertical;
+        padding-bottom: $subnav-padding-vertical;
+      }
+    }
+
+  }
+
+
+  // Buttons in subnavs
+  //
+  // Vertically center a button within a subnav (when *not* in a form).
+
+  .navbar-btn {
+
+    display: inline-block;
+    height: $subnav-height;
+    //@include navbar-vertical-align($input-height-small);
+
+    &.btn-sm {
+      @include navbar-vertical-align($input-height-small);
+    }
+    &.btn-xs {
+      @include navbar-vertical-align(22);
+    }
+  }
+
+
+  // Text in subnavs
+  //
+  // Add a class to make any element properly align itself vertically within the subnavs.
+
+  .navbar-text {
+    @include navbar-vertical-align(ceil($line-height-computed * 0.5));
+
+    @media (min-width: $grid-float-breakpoint) {
+      margin-left: $subnav-padding-horizontal;
+      margin-right: $subnav-padding-horizontal;
+    }
+  }
+
+
+  // Component alignment
+  //
+  // Repurpose the pull utilities as their own subnav utilities to avoid specificity
+  // issues with parents and chaining. Only do this when the subnav is uncollapsed
+  // though so that subnav contents properly stack and align in mobile.
+  //
+  // Declared after the subnav components to ensure more specificity on the margins.
+
+  @media (min-width: $grid-float-breakpoint) {
+    .navbar-right {
+      margin-right: -$subnav-padding-horizontal;
+    }
+  }
+
+}

@@ -1,12 +1,19 @@
-@charset 'UTF-8';
 
 
 
 
-/* Import Partials
+
+/* Bootstrap-Sass
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-@import 'core/style/main';
+@import
+  'core/style/variables',
+  'core/style/typography',
+  'core/style/utilities',
+  'core/style/vendor',
+  'core/style/base',
+  'core/style/layout',
+  'core/style/components';
 
 
 
