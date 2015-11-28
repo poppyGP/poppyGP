@@ -13,10 +13,25 @@
       transclude: true,
       replace: false,
       controller: PanelController,
-      controllerAs: 'vm'
+      controllerAs: 'vm',
+      compile: compile
     };
 
     return directive;
+
+    function compile(tElement, tAttrs, transclude) {
+      return {
+        pre:  preLink,
+        post: postLink
+      };
+
+      function preLink(scope, iElement, iAttrs, ctrl) {
+
+      }
+      function postLink(scope, element, attrs) {
+
+      }
+    }
 
     /** @ngInject */
     function PanelController() {
