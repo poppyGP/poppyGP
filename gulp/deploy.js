@@ -1,5 +1,8 @@
 'use strict';
 
+
+
+
 /* Load Plugins/Dependencies
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
@@ -16,18 +19,19 @@ var $ = require('gulp-load-plugins')({
 });
 
 
-
 /* Deploy to AWS S3 Bucket
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-gulp.task('deploy', ['build'], function() {
+gulp.task('deploy', ['clean', 'build'], function() {
 
   // create a new publisher using S3 options
   // http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#constructor-property
   var publisher = $.awspublish.create({
-    key:    process.env.AWS_KEY,
-    secret: process.env.AWS_SECRET,
-    bucket: process.env.AWS_BUCKET
+    key:    process.env.AWS_ACCESS_KEY_ID,
+    secret: process.env.AWS_SECRET_ACCESS_KEY,
+    params: {
+      Bucket: process.env.AWS_S3_BUCKET_NAME
+    }
   });
 
   // define custom headers
@@ -53,5 +57,6 @@ gulp.task('deploy', ['build'], function() {
 
      // print upload updates to console
     .pipe($.awspublish.reporter());
+
+
 });
-}

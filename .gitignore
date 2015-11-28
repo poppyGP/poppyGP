@@ -16,6 +16,7 @@ ignore/
 *.xspf
 .env
 .awspublish-*
+*.csv
 
 # -------------------------------
 # Bower & npm
