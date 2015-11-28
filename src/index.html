@@ -158,18 +158,20 @@
 
 
 
-  <!-- Page Wrapper
+  <!-- Main Wrapper
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-  <div layout="column" layout-gt-sm="row" layout-fill>
+  <div layout="column" layout-align="start stretch"
+       layout-gt-sm="row" layout-align-gt-sm="stretch stretch"
+       layout-fill>
 
 
 
 
-    <!-- Main Wrapper
+    <!-- Video Wrapper Column
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-    <div flex-sm="75" flex-gt-md="75" layout="column" layout-fill>
+    <div id="main" flex="45" flex-gt-sm="75" layout="column">
 
 
       <!-- Navbar –––––––––––––––––––––––––––––––––––––– -->
@@ -200,12 +202,18 @@
 
 
 
+
+
+
+
       <!-- Player –––––––––––––––––––––––––––––––––––––– -->
 
       <gp-player channel-id="20560398">
       </gp-player>
 
       <!-- ––––––––––––––––––––––––––––––––––––––––––––– -->
+
+
 
 
     </div>
@@ -215,15 +223,18 @@
 
 
 
-    <!-- Side Wrapper
+    <!-- Panel Wrapper Right
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-    <div flex-sm="25" flex-gt-md="25" layout="column" layout-fill>
-      <gp-panel layout="row" layout-gt-md="column" layout-fill>
-        <gp-webchat flex="grow" network="irc.snoonet.org" nick="poppyGP" channel="f1" theme="mini">
-        </gp-webchat>
-      </gp-panel>
-    </div>
+
+
+    <gp-panel flex="55" flex-gt-sm="25" layout="column">
+
+      <gp-webchat flex="100" network="irc.snoonet.org" nick="poppyGP" channel="f1" theme="mini">
+      </gp-webchat>
+
+    </gp-panel>
+
 
     <!-- ––––––––––––––––––––––––––––––––––––––––––––– -->
 

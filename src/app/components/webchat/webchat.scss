@@ -1,26 +1,60 @@
+
+// gp-webchat {
+//   z-index: 0;
+//
+//   position: relative;
+//   min-height: 100%;
+//   height: 100%;
+//   width: 100%;
+//
+//   padding: 0;
+//   margin: 0;
+//   overflow: hidden;
+//
+//   .kiwiirc {
+//     height: 100%;
+//     width: 100%;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     border: 0px solid none;
+//     padding: 0;
+//     margin: 0;
+//     overflow: hidden;
+//   }
+// }
+//
+
+$flexframe-padding-top:     rem-calc(25);
+$flexframe-padding-bottom:  10%;
+$flexframe-margin-bottom:   rem-calc(16);
+$flexframe-margin-top:      0;
+
 gp-webchat {
+
   z-index: 0;
-
   position: relative;
-  min-height: 100%;
-  height: 100%;
-  width: 100%;
+  height: 0;
+  max-height: 100%;
 
-  padding: 0;
-  margin: 0;
+  padding-top: $flexframe-padding-top + $navbar-height;
+  padding-bottom: $flexframe-padding-bottom;
+
+  margin-top: $flexframe-margin-top;
+  margin-bottom: $flexframe-margin-bottom;
+
   overflow: hidden;
 
-  .kiwiirc {
-    height: 100%;
-    width: 100%;
+
+  iframe,
+  object,
+  embed,
+  video {
     position: absolute;
     top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border: 0px solid none;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
+    width: 100%;
+    height: 100%;
   }
 }
