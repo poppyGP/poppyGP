@@ -9,7 +9,7 @@
   function gpWebchatDirective() {
     return {
       restrict: 'E',
-      transclude: false,
+      transclude: true,
       templateUrl: 'app/components/webchat/webchat.html',
       scope: {
         network  : '=*?network',
