@@ -11,7 +11,7 @@
       restrict: 'E',
       templateUrl: 'app/components/panel/panel.html',
       transclude: true,
-      replace: false,
+      replace: true,
       controller: PanelController,
       controllerAs: 'vm'
     };
