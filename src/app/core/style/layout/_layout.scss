@@ -1,3 +1,32 @@
+
+/* Layout Wrappers
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+// Page Wrapper
+// ------------------------------
+
+#page-wrapper {
+  background: #fafafa;
+}
+
+
+// Main Wrapper
+// ------------------------------
+
+#main-wrapper {
+  background: #222222;
+}
+
+
+// Main Wrapper
+// ------------------------------
+
+#main-wrapper {
+  background: #222222;
+}
+
+
 /**
  * Responsive Layout Device and Viewport Styles
  *
@@ -173,7 +202,4 @@ $viewport-width-xl:   1600px;
   and (min-device-width: $viewport-device-xl)
   and (orientation: landscape) {
 
-}
-#main {
-  background: #222;
 }

@@ -1,9 +1,5 @@
 <!doctype html>
-<html class="no-js"
-      ng-app="poppygp">
-
-
-
+<html class="no-js" ng-app="poppygp">
 
 <head>
 
@@ -15,6 +11,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
+  <!-- ––––––––––––––––––––––––––––––––––––––––––––– -->
 
 
 
@@ -29,8 +26,6 @@
 
 
 
-
-
   <!-- Metadata Tags
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
@@ -39,8 +34,6 @@
   <meta name="description"          content="Grand Prix de Papaveraceae">
 
   <!-- ––––––––––––––––––––––––––––––––––––––––––––– -->
-
-
 
 
 
@@ -62,15 +55,37 @@
 
 
 
-
-
-  <!-- Web Application Icons
+  <!-- Favicon & Touch Icons
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
+  <link rel="apple-touch-icon" sizes="57x57" href="assets/icons/touch/apple-touch-icon-57x57.png?v=letsgo2016">
+  <link rel="apple-touch-icon" sizes="60x60" href="assets/icons/touch/apple-touch-icon-60x60.png?v=letsgo2016">
+  <link rel="apple-touch-icon" sizes="72x72" href="assets/icons/touch/apple-touch-icon-72x72.png?v=letsgo2016">
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/icons/touch/apple-touch-icon-76x76.png?v=letsgo2016">
+  <link rel="apple-touch-icon" sizes="114x114" href="assets/icons/touch/apple-touch-icon-114x114.png?v=letsgo2016">
+  <link rel="apple-touch-icon" sizes="120x120" href="assets/icons/touch/apple-touch-icon-120x120.png?v=letsgo2016">
+  <link rel="apple-touch-icon" sizes="144x144" href="assets/icons/touch/apple-touch-icon-144x144.png?v=letsgo2016">
+  <link rel="apple-touch-icon" sizes="152x152" href="assets/icons/touch/apple-touch-icon-152x152.png?v=letsgo2016">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/touch/apple-touch-icon-180x180.png?v=letsgo2016">
 
+  <link rel="icon" type="image/png" href="assets/icons/touch/favicon-32x32.png?v=letsgo2016" sizes="32x32">
+  <link rel="icon" type="image/png" href="assets/icons/touch/favicon-194x194.png?v=letsgo2016" sizes="194x194">
+  <link rel="icon" type="image/png" href="assets/icons/touch/favicon-96x96.png?v=letsgo2016" sizes="96x96">
+  <link rel="icon" type="image/png" href="assets/icons/touch/android-chrome-192x192.png?v=letsgo2016" sizes="192x192">
+  <link rel="icon" type="image/png" href="assets/icons/touch/favicon-16x16.png?v=letsgo2016" sizes="16x16">
+
+  <link rel="manifest" href="assets/icons/touch/manifest.json?v=letsgo2016">
+  <link rel="mask-icon" href="assets/icons/touch/safari-pinned-tab.svg?v=letsgo2016" color="#004626">
+  <link rel="shortcut icon" href="assets/icons/touch/favicon.ico?v=letsgo2016">
+
+  <meta name="apple-mobile-web-app-title" content="poppyGP">
+  <meta name="application-name" content="poppyGP">
+  <meta name="msapplication-TileColor" content="#004626">
+  <meta name="msapplication-TileImage" content="assets/icons/touch/mstile-144x144.png?v=letsgo2016">
+  <meta name="msapplication-config" content="assets/icons/touch/browserconfig.xml?v=letsgo2016">
+  <meta name="theme-color" content="#004626">
 
   <!-- ––––––––––––––––––––––––––––––––––––––––––––– -->
-
 
 
 
@@ -78,15 +93,8 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,300italic,400italic,600,200" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,700" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700" rel="stylesheet" type="text/css">
-  <!--
-  <link href="https://fonts.googleapis.com/css?family=Raleway:400,600" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet" type="text/css">
-  -->
 
   <!-- ––––––––––––––––––––––––––––––––––––––––––––– -->
-
 
 
 
@@ -107,7 +115,6 @@
 
 
 
-
   <!-- Browser Compatibility
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
@@ -119,29 +126,9 @@
 
 
 
-
-
-
-
-
-
-
-
-
 </head>
 
-
-
-
 <body>
-
-
-
-
-
-
-
-
 
 
   <!-- Browse Happy
@@ -153,34 +140,37 @@
     </p>
   <![endif]-->
 
-  <!-- end browse happy –––––––––––––––––––––––––––– -->
+  <!-- END browse happy –––––––––––––––––––––––––––– -->
 
 
 
 
-  <!-- Main Wrapper
+
+
+
+
+  <!-- Page Wrapper
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-  <div layout="column" layout-align="start stretch"
-       layout-gt-sm="row" layout-align-gt-sm="stretch stretch"
-       layout-fill>
+  <div id="page-wrapper"
+       layout="column" layout-fill
+       layout-gt-sm="row">
 
 
-
-
-    <!-- Video Wrapper Column
+    <!-- Main Wrapper
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-    <div id="main" flex="45" flex-gt-sm="75" layout="column">
+    <div id="main-wrapper"
+         layout="column"
+         flex="45"
+         flex-gt-sm="75">
 
 
       <!-- Navbar –––––––––––––––––––––––––––––––––––––– -->
 
       <gp-navbar>
 
-        <gp-stripes>
-        </gp-stripes>
-
+        <gp-stripes></gp-stripes>
 
         <span flex></span>
 
@@ -197,12 +187,7 @@
 
       </gp-navbar>
 
-      <!-- ––––––––––––––––––––––––––––––––––––––––––––– -->
-
-
-
-
-
+      <!-- END navbar –––––––––––––––––––––––––––––––––– -->
 
 
 
@@ -211,22 +196,20 @@
       <gp-player channel-id="20560398">
       </gp-player>
 
-      <!-- ––––––––––––––––––––––––––––––––––––––––––––– -->
-
-
+      <!-- END player –––––––––––––––––––––––––––––––––– -->
 
 
     </div>
 
-    <!-- end main container –––––––––––––––––––––––––– -->
+    <!-- END main wrapper –––––––––––––––––––––––––––– -->
 
 
 
 
-    <!-- Panel Wrapper Right
+
+
+    <!-- Side Wrapper
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-
-
 
     <gp-panel flex="55" flex-gt-sm="25" layout="column">
 
@@ -235,30 +218,16 @@
 
     </gp-panel>
 
+    <!-- END side wrapper –––––––––––––––––––––––––––– -->
 
-    <!-- ––––––––––––––––––––––––––––––––––––––––––––– -->
+
 
 
 
 
   </div>
-  <!-- end page wrapper –––––––––––––––––––––––––––– -->
 
-
-
-
-  <!-- Bottom Status Bar
-  ––––––––––––––––––––––––––––––––––––––––––––––––––
-
-  <gp-navbar class="navbar navbar-light navbar-fixed-bottom">
-
-    <a class="navbar-btn" href="#">
-      <i class="fa fa-flag-checkered"></i>
-    </a>
-
-  </gp-navbar>
-
-  end bottom status bar ––––––––––––––––––––––– -->
+  <!-- END page wrapper –––––––––––––––––––––––––––– -->
 
 
 
@@ -278,9 +247,6 @@
   <script async src='//www.google-analytics.com/analytics.js'></script>
 
   <!-- ––––––––––––––––––––––––––––––––––––––––––––– -->
-
-
-
 
 
 
@@ -304,9 +270,6 @@
 
 
 
-
 </body>
-
-
 
 </html>

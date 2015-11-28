@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+  <msapplication>
+    <tile>
+      <square70x70logo src="assets/icons/touch/mstile-70x70.png?v=letsgo2016"/>
+      <square150x150logo src="assets/icons/touch/mstile-150x150.png?v=letsgo2016"/>
+      <square310x310logo src="assets/icons/touch/mstile-310x310.png?v=letsgo2016"/>
+      <wide310x150logo src="assets/icons/touch/mstile-310x150.png?v=letsgo2016"/>
+      <TileColor>#004626</TileColor>
+    </tile>
+  </msapplication>
+</browserconfig>
