@@ -1,0 +1,31 @@
+html,
+body {
+  background: #000;
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+
+/* Bootstrap
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+//  Core CSS
+// ------------------------------
+
+@import '../../bower_components/bootstrap/scss/reboot';
+@import '../../bower_components/bootstrap/scss/type';
+@import '../../bower_components/bootstrap/scss/images';
+//@import '../../bower_components/bootstrap/scss/code';
+//@import '../../bower_components/bootstrap/scss/grid';
+//@import '../../bower_components/bootstrap/scss/tables';
+//@import '../../bower_components/bootstrap/scss/forms';
+@import '../../bower_components/bootstrap/scss/buttons';

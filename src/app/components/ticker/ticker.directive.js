@@ -64,6 +64,7 @@
           'Twitter status update message from $http.get()',
           'New Reddit post from $http.get()'
         ];
+        $log.info('TickerController activated');
       }
     }
 

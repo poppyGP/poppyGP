@@ -67,19 +67,16 @@ src/
 ├── app/
 │   │
 │   ├── core/                         --> CORE MODULE
-│   │   ├── core.module.js
+│   │   ├── style/
 │   │   ├── core.config.js
 │   │   ├── core.constants.js
-│   │   └── core.run.js
-│   │
-│   ├── common/                       --> SHARED MODULES
-│   │   ├── exception/                --> Exception Handler
-│   │   └── logger/                   --> Logging Service
+│   │   ├── core.route.js
+│   │   └── core.module.js
 │   │
 │   ├── components/                   --> COMPONENTS MODULE
-│   │   ├── brand/
-│   │   ├── player/
-│   │   ├── toolbar/
+│   │   ├── navbar/
+│   │   ├── stripes/
+│   │   ├── ticker/
 │   │   └── components.module.js
 │   │
 │   ├── main/                         --> MAIN APPLICATION MODULE
@@ -99,12 +96,23 @@ src/
 │   │   ├── content.scss
 │   │   └── content.module.js
 │   │
-│   ├── playlist/                     --> PLAYLIST FEATURE MODULE
-│   │   ├── playlist.controller.js
-│   │   ├── playlist.directive.js
-│   │   ├── playlist.filter.js
-│   │   ├── playlist.service.js
-│   │   └── playlist.module.js
+│   ├── layout/
+│   │   ├── header/
+│   │   │   ├── 
+│   │   │   ├── 
+│   │   │   ├── 
+│   │   │   └── 
+│   │   ├── footer/
+│   │   │   ├── 
+│   │   │   ├── 
+│   │   │   ├── 
+│   │   │   └── 
+│   │   ├── main/
+│   │   │   ├── 
+│   │   │   ├── 
+│   │   │   └── 
+│   │   ├── 
+│   │   └── layout.module.js
 │   │
 │   ├── index.module.js               --> Module Index
 │   └── index.scss                    --> Stylesheet Index

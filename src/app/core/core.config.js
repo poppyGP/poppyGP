@@ -15,7 +15,9 @@
     $sceDelegateProvider.resourceUrlWhitelist([
       'self',
       'http://www.ustream.tv/embed/**',
-      'https://www.ustream.tv/embed/**'
+      'https://www.ustream.tv/embed/**',
+      'http://www.kiwiirc.com/client/**',
+      'https://kiwiirc.com/client/**'
     ]);
 
     // ------------------------------

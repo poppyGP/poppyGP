@@ -1,46 +1,36 @@
-@charset 'UTF-8';
-
-
-
-
-/* Import Partials
+/* Variables
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-@import 'core/style/main';
+@import 'vars/gpquery';
+@import 'vars/theme';
+@import 'vars/bootstrap';
+@import 'vars/custom';
 
 
 
-
-/* Inject Bower Styles
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-// bower:scss
-// endbower
-
-
-
-
-/* Yeoman (Remove)
+/* Utilities
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
-}
+@import 'utils/functions';
+@import 'utils/mixins';
 
-.thumbnail {
-  height: 200px;
-
-  img.pull-right {
-    width: 50px;
-  }
-}
-
-
-
-
-/* Inject Styles
+/* Base Styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-// injector
-// endinjector
+
+@import 'base/base';
+@import 'base/fonts';
+@import 'base/typography';
+@import 'base/helpers';
+
+/* Page Layout
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@import 'layout/header';
+@import 'layout/footer';
+
+/* Vendor Styles & Components
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+//@import 'vendor/bootstrap-sass';
+@import 'vendor/bootstrap';
+@import 'vendor/material-flex';

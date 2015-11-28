@@ -1,0 +1,179 @@
+/**
+ * Responsive Layout Device and Viewport Styles
+ *
+ *
+ * Devices        Details
+ *  Mobile (sm)     Portrait/Landscape
+ *  Mobile (lg)     Portrait/Landscape
+ *  Phablet         Portrait/Landscape
+ *  Tablet (sm)     Portrait/Landscape
+ *  Tablet (lg)     Portrait/Landscape
+ *  Screen (xs)
+ *  Screen (sm)
+ *  Screen (md)
+ *  Screen (lg)
+ *  Screen (xl)
+ */
+
+/* Responsive Variables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+// Device Widths
+// ------------------------------
+
+$viewport-device-xs:  320px;
+$viewport-device-sm:  480px;
+$viewport-device-md:  640px;
+$viewport-device-lg:  800px;
+$viewport-device-xl:  960px;
+
+
+// Viewport Widths
+// ------------------------------
+
+$viewport-width-xs:   480px;
+$viewport-width-sm:   720px;
+$viewport-width-md:   960px;
+$viewport-width-lg:   1200px;
+$viewport-width-xl:   1600px;
+
+
+
+
+/* Mobile (Small)
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+// Portrait
+// ------------------------------
+
+@media only screen
+  and (max-device-width: ($viewport-device-xs - 1))
+  and (orientation: portrait) {
+
+}
+
+
+// Landscape
+// ------------------------------
+
+@media only screen
+  and (max-device-width: ($viewport-device-sm - 1))
+  and (orientation: landscape) {
+
+}
+
+
+
+
+/* Mobile (Large)
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+// Portrait
+// ------------------------------
+
+@media only screen
+  and (min-device-width: $viewport-device-xs)
+  and (max-device-width: ($viewport-device-sm - 1))
+  and (orientation: portrait) {
+
+}
+
+
+// Landscape
+// ------------------------------
+
+@media only screen
+  and (min-device-width: $viewport-device-sm)
+  and (max-device-width: ($viewport-device-md - 1))
+  and (orientation: landscape) {
+
+}
+
+
+
+
+/* Phablet
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+// Portrait
+// ------------------------------
+
+@media only screen
+  and (min-device-width: $viewport-device-sm)
+  and (max-device-width: ($viewport-device-md - 1))
+  and (orientation: portrait) {
+
+}
+
+
+// Landscape
+// ------------------------------
+
+@media only screen
+  and (min-device-width: $viewport-device-md)
+  and (max-device-width: ($viewport-device-lg - 1))
+  and (orientation: landscape) {
+
+}
+
+
+
+
+/* Tablet (Small)
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+// Portrait
+// ------------------------------
+
+@media only screen
+  and (min-device-width: $viewport-device-md)
+  and (max-device-width: ($viewport-device-lg - 1))
+  and (orientation: portrait) {
+
+}
+
+
+// Landscape
+// ------------------------------
+
+@media only screen
+  and (min-device-width: $viewport-device-lg)
+  and (max-device-width: ($viewport-device-xl - 1))
+  and (orientation: landscape) {
+
+}
+
+
+
+
+/* Tablet (Large)
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+// Portrait
+// ------------------------------
+
+@media only screen
+  and (min-device-width: $viewport-device-lg)
+  and (max-device-width: ($viewport-device-xl - 1))
+  and (orientation: portrait) {
+
+}
+
+
+// Landscape
+// ------------------------------
+
+@media only screen
+  and (min-device-width: $viewport-device-xl)
+  and (orientation: landscape) {
+
+}
+#main {
+  background: #222;
+}
