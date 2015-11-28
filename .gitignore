@@ -15,6 +15,7 @@ inception*
 ignore/
 *.xspf
 .env
+.awspublish-*
 
 # -------------------------------
 # Bower & npm
