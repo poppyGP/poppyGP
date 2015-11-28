@@ -11,6 +11,8 @@
 # Project-Specific
 # -------------------------------
 
+inception*
+ignore/
 *.xspf
 .env
 
