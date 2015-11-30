@@ -18,7 +18,7 @@
   // SEE:
   //
   //
-.gp-panel {
+gp-panel {
   background: #fefefe;
   color: #000;
   border-right: 1px solid #ccc;
@@ -29,14 +29,20 @@
   width: 100%;
   overflow-x: hidden;
   overflow-y: auto;
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 0px 2px 2px rgba(0, 0, 0, 0.098), 0px 0px 5px 1px rgba(0, 0, 0, 0.084);
+
+  .gp-panel {
+    min-height: 100%;
+    position: relative;
+  }
 }
 @media (min-width: 768px) {
-  .gp-panel {
+  gp-panel {
 
   }
 }
 
-.gp-panel-toggle {
+gp-panel-toggle {
   min-height: 64px;
   min-width: 64;
   position: absolute;
@@ -48,11 +54,11 @@
 }
 
 
-.gp-panel.animate.ng-hide-remove {
+gp-panel.animate.ng-hide-remove {
   animation: $swift-ease-in;
 }
 
-.gp-panel.animate.ng-hide-add {
+gp-panel.animate.ng-hide-add {
   animation: $swift-ease-out;
 }
 

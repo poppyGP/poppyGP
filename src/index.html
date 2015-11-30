@@ -155,6 +155,30 @@
 
 
 
+  <!-- Navbar –––––––––––––––––––––––––––––––––––––– -->
+
+  <gp-navbar>
+
+    <gp-stripes></gp-stripes>
+
+    <span>poppyGP</span>
+
+    <span flex></span>
+
+    <button class="nav-button" type="button" ng-click="">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
+        <path d="M0 0h18v18h-18z" fill="none"></path>
+        <path d="M2 13.5h14v-1.5h-14v1.5zm0-4h14v-1.5h-14v1.5zm0-5.5v1.5h14v-1.5h-14z"></path>
+      </svg>
+    </button>
+
+  </gp-navbar>
+
+  <!-- END navbar –––––––––––––––––––––––––––––––––– -->
+
+
+
+
 
 
   <!-- Page Wrapper
@@ -162,7 +186,7 @@
 
   <div id="page-wrapper"
        layout="column" layout-fill
-       layout-gt-sm="row">
+       layout-gt-md="row">
 
 
     <!-- Main Wrapper
@@ -170,33 +194,10 @@
 
     <div id="main-wrapper"
          layout="column"
-         flex="45"
-         flex-gt-sm="75">
-
-
-      <!-- Navbar –––––––––––––––––––––––––––––––––––––– -->
-
-      <gp-navbar>
-
-        <gp-stripes></gp-stripes>
-
-        <span flex></span>
-
-        <span>poppyGP</span>
-
-        <span flex></span>
-
-        <button>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
-            <path d="M0 0h18v18h-18z" fill="none"></path>
-            <path d="M2 13.5h14v-1.5h-14v1.5zm0-4h14v-1.5h-14v1.5zm0-5.5v1.5h14v-1.5h-14z"></path>
-          </svg>
-        </button>
-
-      </gp-navbar>
-
-      <!-- END navbar –––––––––––––––––––––––––––––––––– -->
-
+         flex="50"
+         flex-md="60"
+         flex-lg="65"
+         flex-gt-lg="70">
 
 
       <!-- Player –––––––––––––––––––––––––––––––––––––– -->
@@ -205,6 +206,15 @@
       </gp-player>
 
       <!-- END player –––––––––––––––––––––––––––––––––– -->
+
+
+      <!-- Schedule –––––––––––––––––––––––––––––––––––– -->
+
+      <gp-player-bar>
+
+      </gp-player-bar>
+
+      <!-- END schedule –––––––––––––––––––––––––––––––– -->
 
 
     </div>
@@ -219,9 +229,16 @@
     <!-- Side Wrapper
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-    <gp-panel flex="55" flex-gt-sm="25" layout="column">
+    <gp-panel layout="column"
+              flex="50"
+              flex-md="40"
+              flex-lg="35"
+              flex-gt-lg="30">
 
-      <gp-webchat flex="100" network="irc.snoonet.org" nick="poppyGP" channel="f1" theme="mini">
+      <gp-webchat network="irc.snoonet.org"
+                  nick="poppyGP"
+                  channel="f1"
+                  theme="mini">
       </gp-webchat>
 
     </gp-panel>
@@ -248,9 +265,9 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
   <script>
-  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-  ga('create', 'UA-63184114-1', 'auto');
-  ga('send', 'pageview');
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', 'UA-63184114-1', 'auto');
+    ga('send', 'pageview');
   </script>
   <script async src='//www.google-analytics.com/analytics.js'></script>
 

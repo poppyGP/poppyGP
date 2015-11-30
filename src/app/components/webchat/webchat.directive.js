@@ -10,6 +10,7 @@
     return {
       restrict: 'E',
       transclude: true,
+      replace: true,
       templateUrl: 'app/components/webchat/webchat.html',
       scope: {
         network  : '=*?network',
