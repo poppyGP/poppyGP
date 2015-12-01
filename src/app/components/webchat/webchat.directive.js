@@ -20,7 +20,7 @@
       },
       link: function(scope) {
         //scope.chatSrc = 'https://kiwiirc.com/client/' + scope.network + '/?' + scope.nickPrefix + '-?&theme=' + scope.theme + '#' + scope.channel + '>';
-        scope.chatSrc = 'https://kiwiirc.com/client/irc.snoonet.org/?nick=poppyGP-|?&theme=mini#f1';
+        scope.chatSrc = 'https://kiwiirc.com/client/irc.snoonet.org/?nick=poppyGP-?&theme=mini#f1';
       }
     };
   }

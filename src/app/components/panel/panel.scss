@@ -22,7 +22,7 @@ gp-panel {
   background: #fefefe;
   color: #000;
   border-right: 1px solid #ccc;
-  min-height: 100%;
+
   max-height: 100%;
   height: 100%;
   position: relative;
@@ -30,6 +30,7 @@ gp-panel {
   overflow-x: hidden;
   overflow-y: auto;
   box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 0px 2px 2px rgba(0, 0, 0, 0.098), 0px 0px 5px 1px rgba(0, 0, 0, 0.084);
+  padding-bottom: $navbar-height;
 
   .gp-panel {
     min-height: 100%;

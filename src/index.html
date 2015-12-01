@@ -155,38 +155,42 @@
 
 
 
-  <!-- Navbar –––––––––––––––––––––––––––––––––––––– -->
-
-  <gp-navbar>
-
-    <gp-stripes></gp-stripes>
-
-    <span>poppyGP</span>
-
-    <span flex></span>
-
-    <button class="nav-button" type="button" ng-click="">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
-        <path d="M0 0h18v18h-18z" fill="none"></path>
-        <path d="M2 13.5h14v-1.5h-14v1.5zm0-4h14v-1.5h-14v1.5zm0-5.5v1.5h14v-1.5h-14z"></path>
-      </svg>
-    </button>
-
-  </gp-navbar>
-
-  <!-- END navbar –––––––––––––––––––––––––––––––––– -->
-
-
-
-
-
-
   <!-- Page Wrapper
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
   <div id="page-wrapper"
-       layout="column" layout-fill
+       layout-fill
+       layout-sm="column"
+       layout-md="column"
        layout-gt-md="row">
+
+
+
+
+
+
+    <!-- Navbar –––––––––––––––––––––––––––––––––––––– -->
+
+    <gp-navbar>
+
+      <gp-stripes></gp-stripes>
+
+      <span>poppyGP</span>
+
+      <span flex></span>
+
+      <button class="nav-button" type="button" ng-click="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
+          <path d="M0 0h18v18h-18z" fill="none"></path>
+          <path d="M2 13.5h14v-1.5h-14v1.5zm0-4h14v-1.5h-14v1.5zm0-5.5v1.5h14v-1.5h-14z"></path>
+        </svg>
+      </button>
+
+    </gp-navbar>
+
+    <!-- END navbar –––––––––––––––––––––––––––––––––– -->
+
+
 
 
     <!-- Main Wrapper
@@ -194,7 +198,7 @@
 
     <div id="main-wrapper"
          layout="column"
-         flex="50"
+         flex-sm="50"
          flex-md="60"
          flex-lg="65"
          flex-gt-lg="70">
@@ -230,7 +234,7 @@
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
     <gp-panel layout="column"
-              flex="50"
+              flex-sm="50"
               flex-md="40"
               flex-lg="35"
               flex-gt-lg="30">
