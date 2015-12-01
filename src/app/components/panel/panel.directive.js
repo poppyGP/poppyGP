@@ -6,7 +6,7 @@
     .directive('gpPanel', gpPanelDirective);
 
   /** @ngInject */
-  function gpPanelDirective($window) {
+  function gpPanelDirective() {
     var directive = {
       restrict: 'E',
       templateUrl: 'app/components/panel/panel.html',
@@ -20,20 +20,23 @@
     /** @ngInject */
     function PanelController() {
       var vm = this;
-      var viewport = {};
 
-      angular.extend(this, {
-        visible: true,
-        toggle: function() {
-          viewport.width  = $window.innerWidth;   // $(window).width();
-          viewport.height = $window.innerHeight;  // $(window).height();
-          viewport.ratio  = viewport.width / viewport.height;
+      vm.visible = true;
+      //var viewport = {};
 
-          vm.visible = !vm.visible;
-          vm.animate = true;
-          //$log.info('Viewport Information: ' + viewport.toJson());
-        }
-      });
+      //angular.extend(this, {
+      //  visible: true,
+      //  toggle: function() {
+      //    viewport.width  = $window.innerWidth;   // $(window).width();
+      //    viewport.height = $window.innerHeight;  // $(window).height();
+      //    viewport.ratio  = viewport.width / viewport.height;
+
+      //    vm.visible = !vm.visible;
+      //    vm.animate = true;
+      //    //$log.info('Viewport Information: ' + viewport.toJson());
+      //  }
+      //});
+
 
     }
   }

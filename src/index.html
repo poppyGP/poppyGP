@@ -155,6 +155,32 @@
 
 
 
+  <!-- Navbar –––––––––––––––––––––––––––––––––––––– -->
+
+  <gp-navbar>
+
+    <gp-stripes></gp-stripes>
+
+    <span>poppyGP</span>
+
+    <span flex></span>
+
+    <button class="nav-button" type="button" ng-click="">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
+        <path d="M0 0h18v18h-18z" fill="none"></path>
+        <path d="M2 13.5h14v-1.5h-14v1.5zm0-4h14v-1.5h-14v1.5zm0-5.5v1.5h14v-1.5h-14z"></path>
+      </svg>
+    </button>
+
+  </gp-navbar>
+
+  <!-- END navbar –––––––––––––––––––––––––––––––––– -->
+
+
+
+
+
+
   <!-- Page Wrapper
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
@@ -163,32 +189,6 @@
        layout-sm="column"
        layout-md="column"
        layout-gt-md="row">
-
-
-
-
-
-
-    <!-- Navbar –––––––––––––––––––––––––––––––––––––– -->
-
-    <gp-navbar>
-
-      <gp-stripes></gp-stripes>
-
-      <span>poppyGP</span>
-
-      <span flex></span>
-
-      <button class="nav-button" type="button" ng-click="">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
-          <path d="M0 0h18v18h-18z" fill="none"></path>
-          <path d="M2 13.5h14v-1.5h-14v1.5zm0-4h14v-1.5h-14v1.5zm0-5.5v1.5h14v-1.5h-14z"></path>
-        </svg>
-      </button>
-
-    </gp-navbar>
-
-    <!-- END navbar –––––––––––––––––––––––––––––––––– -->
 
 
 
@@ -233,19 +233,23 @@
     <!-- Side Wrapper
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-    <gp-panel layout="column"
-              flex-sm="50"
-              flex-md="40"
-              flex-lg="35"
-              flex-gt-lg="30">
+    <div id="panel-wrapper" layout="column"
+                flex-sm="50"
+                flex-md="40"
+                flex-lg="35"
+                flex-gt-lg="30">
 
-      <gp-webchat network="irc.snoonet.org"
-                  nick="poppyGP"
-                  channel="f1"
-                  theme="mini">
-      </gp-webchat>
+      <gp-panel flex>
 
-    </gp-panel>
+        <gp-webchat network="irc.snoonet.org"
+                    nick="poppyGP"
+                    channel="f1"
+                    theme="mini">
+        </gp-webchat>
+
+      </gp-panel>
+
+    </div>
 
     <!-- END side wrapper –––––––––––––––––––––––––––– -->
 
