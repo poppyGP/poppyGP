@@ -62,15 +62,6 @@ gp-subnav {
   padding: 0;
   margin: 0;
 
-  .gp-stripes, .button, .btn {
-    &:first-child {
-      margin-left: $subnav-margin-offset;
-    }
-    &:last-child {
-      margin-right: $subnav-margin-offset;
-    }
-  }
-
 }
 
 .gp-subnav-inner {

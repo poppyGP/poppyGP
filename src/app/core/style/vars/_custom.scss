@@ -118,42 +118,16 @@ $swift-ease-in-out: all $swift-ease-in-out-duration $swift-ease-in-out-timing-fu
 
 
 
-/* Subnav Variables
+/* Angular-Material Box Shadows
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-$navbar-height:               36px;
-$subnav-height:               24px;
+$shadow-key-umbra-opacity:      0.2;
+$shadow-key-penumbra-opacity:   0.14;
+$shadow-ambient-shadow-opacity: 0.12;
 
-$subnav-margin-bottom:        0; //$line-height-computed;
-$subnav-border-radius:        $border-radius;
-$subnav-padding-horizontal:   $navbar-padding-horizontal;
-$subnav-padding-vertical:     $navbar-padding-vertical / 2;
-$subnav-collapse-max-height:  240 !default;
+$shadow-z1: 0px 1px 3px 0px rgba(0, 0, 0, $shadow-key-umbra-opacity), 0px 1px 1px 0px rgba(0, 0, 0, $shadow-key-penumbra-opacity), 0px 2px 1px -1px rgba(0, 0, 0, $shadow-ambient-shadow-opacity) !default;
+$shadow-z2: 0px 2px 4px -1px rgba(0, 0, 0, $shadow-key-umbra-opacity), 0px 4px 5px 0px rgba(0, 0, 0, $shadow-key-penumbra-opacity), 0px 1px 10px 0px rgba(0, 0, 0, $shadow-ambient-shadow-opacity) !default;
+$shadow-z3: 0px 4px 5px -2px rgba(0, 0, 0, $shadow-key-umbra-opacity), 0px 7px 10px 1px rgba(0, 0, 0, $shadow-key-penumbra-opacity), 0px 2px 16px 1px rgba(0, 0, 0, $shadow-ambient-shadow-opacity) !default;
+$shadow-z4: 0px 6px 6px -3px rgba(0, 0, 0, $shadow-key-umbra-opacity), 0px 10px 14px 1px rgba(0, 0, 0, $shadow-key-penumbra-opacity), 0px 4px 18px 3px rgba(0, 0, 0, $shadow-ambient-shadow-opacity) !default;
+$shadow-z5: 0px 7px 8px -4px rgba(0, 0, 0, $shadow-key-umbra-opacity), 0px 13px 19px 2px rgba(0, 0, 0, $shadow-key-penumbra-opacity), 0px 5px 24px 4px rgba(0, 0, 0, $shadow-ambient-shadow-opacity) !default;
 
-$subnav-color:                $gray-darker;
-$subnav-bg:                   #f5f5f5;
-$subnav-border:               darken($navbar-light-color, 6.5%);
-
-
-// Subnav links
-$subnav-link-color:           $link-color;
-$subnav-link-hover-color:     $link-hover-color;
-$subnav-link-hover-bg:        transparent;
-$subnav-link-active-color:    $gray;
-$subnav-link-active-bg:       darken($subnav-bg, 6.5%);
-$subnav-link-disabled-color:  #ccc;
-$subnav-link-disabled-bg:     transparent;
-
-$subnav-link-padding:         4px 6px;
-
-// Subnav brand label
-$subnav-brand-color:          $gray-darker;
-$subnav-brand-hover-color:    darken($subnav-brand-color, 10%);
-$subnav-brand-hover-bg:       transparent;
-
-// Subnav toggle
-$subnav-toggle-hover-bg:      #ddd;
-$subnav-toggle-icon-bar-bg:   #888;
-$subnav-toggle-border-color:  #ddd;
-
-/* ––––––––––––––––––––––––––––––––––––––––––––––– */
