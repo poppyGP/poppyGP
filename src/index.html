@@ -234,28 +234,30 @@
 
 
 
-    <!-- Side Wrapper
+    <!-- Content Panel
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <!--
-    <div id="panel-wrapper" layout="column"
-                flex-sm="50"
-                flex-md="40"
-                flex-lg="35"
-                flex-gt-lg="30">
+    <gp-panel>
+    </gp-panel>
     -->
-      <gp-panel>
+    <div class="gp-content"
+         controller="ContentController as vm"
+         ng-hide="vm.hidden"
+         ng-class="{'animate': vm.hidden}"
+         ng-include="'app/layout/content/content.html'">
 
-        <gp-webchat network="irc.snoonet.org"
-                    nick="poppyGP"
-                    channel="f1"
-                    theme="mini">
-        </gp-webchat>
-
-      </gp-panel>
-    <!--
     </div>
-    -->
-    <!-- END side wrapper –––––––––––––––––––––––––––– -->
+      <!--
+      <gp-webchat network="irc.snoonet.org"
+                  nick="poppyGP"
+                  channel="f1"
+                  theme="mini">
+      </gp-webchat>
+      -->
+
+    </gp-panel>
+
+    <!-- END content panel ––––––––––––––––––––––––––– -->
 
 
 
