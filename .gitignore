@@ -12,7 +12,7 @@
 # -------------------------------
 
 inception*
-ignore/
+.ignore
 *.xspf
 .env
 .awspublish-*

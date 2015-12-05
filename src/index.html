@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" ng-app="poppygp">
+<html class="no-js" lang="en" ng-app="poppygp">
 
 <head>
 
@@ -210,8 +210,10 @@
 
       <!-- Player –––––––––––––––––––––––––––––––––––––– -->
 
-      <gp-player channel-id="20560398">
-      </gp-player>
+      <gp-inception>
+
+      </gp-inception>
+
 
       <!-- END player –––––––––––––––––––––––––––––––––– -->
 
@@ -236,10 +238,7 @@
 
     <!-- Content Panel
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <!--
-    <gp-panel>
-    </gp-panel>
-    -->
+
     <div class="gp-content"
          controller="ContentController as vm"
          ng-hide="vm.hidden"
@@ -247,15 +246,6 @@
          ng-include="'app/layout/content/content.html'">
 
     </div>
-      <!--
-      <gp-webchat network="irc.snoonet.org"
-                  nick="poppyGP"
-                  channel="f1"
-                  theme="mini">
-      </gp-webchat>
-      -->
-
-    </gp-panel>
 
     <!-- END content panel ––––––––––––––––––––––––––– -->
 
