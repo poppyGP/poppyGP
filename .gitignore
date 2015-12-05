@@ -95,3 +95,5 @@ Thumbs.db
 .idea
 app/jspm_packages
 *.lnk
+
+*.sublime*

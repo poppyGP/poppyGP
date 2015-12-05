@@ -1,31 +1,4 @@
-/* Navbar Variables
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-$navbar-base-height:    36px;
-$navbar-height:         $navbar-base-height;
-$navbar-inner-height:   $navbar-base-height;
-
-$navbar-base-padding:   ($navbar-base-height / 3) !default;
-$navbar-indent-margin:  ceil($navbar-base-height * 1.5) !default;
-$navbar-margin-offset:  ((0 - $navbar-base-padding) / 2) !default;
-
-$navbar-color:          rgba(0, 0, 0, 0.87);
-$navbar-background:     rgba(255, 255, 255, 1.00);
-
-$navbar-box-shadow:     0px 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 0px 2px 2px rgba(0, 0, 0, 0.098), 0px 0px 5px 1px rgba(0, 0, 0, 0.084);
-
-
-// ------------------------------
-// Landscape & Portrait Functions
-// ------------------------------
-
-@function navbar-landscape($dimension) {
-  @return ceil(($dimension * 0.875));
-}
-
-@function navbar-portrait($dimension) {
-  @return ceil(($dimension * 0.75));
-}
 
 
 
@@ -38,13 +11,22 @@ gp-navbar {
   display: flex;
   flex-direction: column;
 
-  position: relative;
+  position: fixed;
+  top: 0;
+
   z-index: 2;
   width: 100%;
   background: $navbar-background;
 
   min-height: $navbar-base-height;
   padding: 0 $navbar-base-padding;
+
+  border-bottom-color: $navbar-border-color;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: $navbar-border-color;
+  border-right-color: $navbar-border-color;
+  border-top-color: $navbar-border-color;
 
   box-shadow: $navbar-box-shadow;
 
@@ -74,7 +56,7 @@ gp-navbar {
 
   color: $navbar-color;
   font-weight: 500;
-  font-size: 20px;
+  font-size: $navbar-font-size;
   letter-spacing: 0.005em;
 
   padding: 0;
@@ -101,11 +83,13 @@ gp-navbar {
 @media only screen and (min-width: 0) and (max-width: $layout-breakpoint-sm) and (orientation: portrait) {
   gp-navbar {
     min-height: navbar-portrait($navbar-base-height);
+    padding: 0 navbar-portrait($navbar-base-padding);
   }
 
   .gp-navbar-inner {
     height: navbar-portrait($navbar-base-height);
     max-height: navbar-portrait($navbar-base-height);
+    font-size: navbar-portrait($navbar-font-size);
   }
 }
 
@@ -113,11 +97,13 @@ gp-navbar {
 @media only screen and (min-width: 0) and (max-width: $layout-breakpoint-sm) and (orientation: landscape) {
   gp-navbar {
     min-height: navbar-landscape($navbar-base-height);
+    padding: 0 navbar-landscape($navbar-base-padding);
   }
 
   .gp-navbar-inner {
     height: navbar-landscape($navbar-base-height);
     max-height: navbar-landscape($navbar-base-height);
+    font-size: navbar-landscape($navbar-font-size);
   }
 }
 

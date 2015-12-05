@@ -24,6 +24,30 @@ $device-phablet-landscape:  0;
 $device-tablet-portrait:    0;
 $device-tablet-landscape:   0;
 
+$panel-height-xs:   50%;
+$panel-height-sm:   50%;
+$panel-height-md:   60%;
+$panel-height-lg:   50%;
+$panel-height-xl:   50%;
+
+$panel-width-xs:    40%;
+$panel-width-sm:    40%;
+$panel-width-md:    40%;
+$panel-width-lg:    35%;
+$panel-width-xl:    30%;
+
+$video-height-xs:   (100% - $panel-height-xs);
+$video-height-sm:   (100% - $panel-height-sm);
+$video-height-md:   (100% - $panel-height-md);
+$video-height-lg:   (100% - $panel-height-lg);
+$video-height-xl:   (100% - $panel-height-xl);
+
+$video-width-xs:    (100% - $panel-width-xs);
+$video-width-sm:    (100% - $panel-width-sm);
+$video-width-md:    (100% - $panel-width-md);
+$video-width-lg:    (100% - $panel-width-lg);
+$video-width-xl:    (100% - $panel-width-xl);
+
 
 // Mobile Portrait
 // ------------------------------

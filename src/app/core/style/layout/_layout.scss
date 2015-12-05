@@ -8,8 +8,7 @@
 
 #page-wrapper {
   background: #fafafa;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 
@@ -18,6 +17,41 @@
 
 #main-wrapper {
   background: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+  flex-shrink: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+  @media only screen and (max-width: $layout-breakpoint-sm - 1) {
+    max-width: 100%;
+    max-height: $video-height-xs;
+    flex-basis: $video-height-xs;
+  }
+
+  @media only screen and (min-width: $layout-breakpoint-sm) and (max-width: $layout-breakpoint-md) {
+    max-width: 100%;
+    max-height: $video-height-sm;
+    flex-basis: $video-height-sm;
+  }
+
+  @media only screen and (min-width: $layout-breakpoint-md) and (max-width: $layout-breakpoint-lg) {
+    max-width: $video-width-md;
+    max-height: 100%;
+    flex-basis: $video-width-md;
+  }
+
+  @media only screen and (min-width: $layout-breakpoint-lg) and (max-width: $layout-breakpoint-xl - 1) {
+    max-width: $video-width-lg;
+    max-height: 100%;
+    flex-basis: $video-width-lg;
+  }
+  @media only screen and (min-width: $layout-breakpoint-xl) {
+    max-width: $video-width-xl;
+    max-height: 100%;
+    flex-basis: $video-width-xl;
+  }
 }
 
 

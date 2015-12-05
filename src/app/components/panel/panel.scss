@@ -1,24 +1,70 @@
+$z-index-panel:     500;
 
-//@media only screen
-//and (min-width: $screen-sm-min) {
+gp-panel {
 
-//}
+  box-sizing: border-box;
+  flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  flex-grow: 0;
+  flex-shrink: 0;
+  //padding-bottom: $navbar-height;
 
-//@media (min-width: $screen-sm-min) {
+  overflow-x: hidden;
+  overflow-y: auto;
 
-//}
-//@media (min-width: $screen-md-min) {
+  height: 100%;
+  width: 100%;
 
-//}
-//@media (min-width: $screen-lg-min) {
+  @media only screen and (max-width: $layout-breakpoint-sm - 1) {
+    max-width: 100%;
+    max-height: $panel-height-xs;
+    flex-basis: $panel-height-xs;
+  }
 
-//}
+  @media only screen and (min-width: $layout-breakpoint-sm) and (max-width: $layout-breakpoint-md) {
+    max-width: 100%;
+    max-height: $panel-height-sm;
+    flex-basis: $panel-height-sm;
+  }
 
-  //
-  // SEE:
-  //
-  //
+  @media only screen and (min-width: $layout-breakpoint-md) and (max-width: $layout-breakpoint-lg) {
+    max-width: $panel-width-md;
+    max-height: 100%;
+    flex-basis: $panel-width-md;
+  }
 
+  @media only screen and (min-width: $layout-breakpoint-lg) and (max-width: $layout-breakpoint-xl - 1) {
+    max-width: $panel-width-lg;
+    max-height: 100%;
+    flex-basis: $panel-width-lg;
+  }
+  @media only screen and (min-width: $layout-breakpoint-xl) {
+    max-width: $panel-width-xl;
+    max-height: 100%;
+    flex-basis: $panel-width-xl;
+  }
+
+
+  .gp-panel-inner {
+    background: #fefefe;
+    color: #000;
+    border-left: 1px solid #ccc;
+
+    width: 100%;
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 0px 2px 2px rgba(0, 0, 0, 0.098), 0px 0px 5px 1px rgba(0, 0, 0, 0.084);
+    height: calc(100% - $navbar-height);
+    min-height: calc(100% - $navbar-height); //min-height: 100%;
+
+  }
+
+  &.ng-hide {
+
+  }
+}
+
+/*
 .gp-panel-inner {
   background: #fefefe;
   color: #000;
@@ -75,3 +121,4 @@ gp-panel.animate.ng-hide-add {
   font-size:1.0em;
   color:black;
 }
+*/
