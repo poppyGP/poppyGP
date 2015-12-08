@@ -23,7 +23,6 @@ $button-border-radius:  0.5px !default;
 $button-icon-size:      24px !default;
 $button-icon-size-mini: 18px !default;
 
-// The button component. Defaults to a flat button.
 .nav-button {
   background: transparent;
   border: none;
@@ -35,6 +34,7 @@ $button-icon-size-mini: 18px !default;
   padding: $button-padding;
   display: inline-block;
   overflow: hidden;
+  //box-shadow: $shadow-z1;
   // will-change: box-shadow, transform;
   //transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1),
   //            background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
@@ -55,6 +55,7 @@ $button-icon-size-mini: 18px !default;
 
   &:hover {
     background-color: lighten($brand-primary, 0.14);
+    box-shadow: $shadow-z1;
   }
   > svg {
     font-size: $button-icon-size;
