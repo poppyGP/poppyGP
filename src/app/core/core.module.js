@@ -12,6 +12,7 @@
       'ngSanitize',
       'ngTouch',
 
+      'firebase',
       'ui.bootstrap',
       'ui.router',
       'toastr'

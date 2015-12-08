@@ -6,7 +6,8 @@
       'poppygp.core',
 
       'poppygp.components',
-      'poppygp.layout'
+      'poppygp.layout',
+      'poppygp.schedule'
     ]);
 
 })();
