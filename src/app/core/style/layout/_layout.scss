@@ -1,0 +1,241 @@
+
+/* Layout Wrappers
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+// Page Wrapper
+// ------------------------------
+
+#page-wrapper {
+  background: #fafafa;
+  overflow: hidden;
+}
+
+
+// Main Wrapper
+// ------------------------------
+
+#main-wrapper {
+  background: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+  flex-shrink: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+  @media only screen and (max-width: $layout-breakpoint-sm - 1) {
+    max-width: 100%;
+    max-height: $video-height-xs;
+    flex-basis: $video-height-xs;
+  }
+
+  @media only screen and (min-width: $layout-breakpoint-sm) and (max-width: $layout-breakpoint-md) {
+    max-width: 100%;
+    max-height: $video-height-sm;
+    flex-basis: $video-height-sm;
+  }
+
+  @media only screen and (min-width: $layout-breakpoint-md) and (max-width: $layout-breakpoint-lg) {
+    max-width: $video-width-md;
+    max-height: 100%;
+    flex-basis: $video-width-md;
+  }
+
+  @media only screen and (min-width: $layout-breakpoint-lg) and (max-width: $layout-breakpoint-xl - 1) {
+    max-width: $video-width-lg;
+    max-height: 100%;
+    flex-basis: $video-width-lg;
+  }
+  @media only screen and (min-width: $layout-breakpoint-xl) {
+    max-width: $video-width-xl;
+    max-height: 100%;
+    flex-basis: $video-width-xl;
+  }
+}
+
+
+// Side Wrapper
+// ------------------------------
+
+#panel-wrapper {
+  background: #222222;
+}
+
+
+/**
+ * Responsive Layout Device and Viewport Styles
+ *
+ *
+ * Devices        Details
+ *  Mobile (sm)     Portrait/Landscape
+ *  Mobile (lg)     Portrait/Landscape
+ *  Phablet         Portrait/Landscape
+ *  Tablet (sm)     Portrait/Landscape
+ *  Tablet (lg)     Portrait/Landscape
+ *  Screen (xs)
+ *  Screen (sm)
+ *  Screen (md)
+ *  Screen (lg)
+ *  Screen (xl)
+ */
+
+/* Responsive Variables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+// Device Widths
+// ------------------------------
+
+$viewport-device-xs:  320px;
+$viewport-device-sm:  480px;
+$viewport-device-md:  640px;
+$viewport-device-lg:  800px;
+$viewport-device-xl:  960px;
+
+
+// Viewport Widths
+// ------------------------------
+
+$viewport-width-xs:   480px;
+$viewport-width-sm:   720px;
+$viewport-width-md:   960px;
+$viewport-width-lg:   1200px;
+$viewport-width-xl:   1600px;
+
+
+
+
+/* Mobile (Small)
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+// Portrait
+// ------------------------------
+
+@media only screen
+  and (max-device-width: ($viewport-device-xs - 1))
+  and (orientation: portrait) {
+
+}
+
+
+// Landscape
+// ------------------------------
+
+@media only screen
+  and (max-device-width: ($viewport-device-sm - 1))
+  and (orientation: landscape) {
+
+}
+
+
+
+
+/* Mobile (Large)
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+// Portrait
+// ------------------------------
+
+@media only screen
+  and (min-device-width: $viewport-device-xs)
+  and (max-device-width: ($viewport-device-sm - 1))
+  and (orientation: portrait) {
+
+}
+
+
+// Landscape
+// ------------------------------
+
+@media only screen
+  and (min-device-width: $viewport-device-sm)
+  and (max-device-width: ($viewport-device-md - 1))
+  and (orientation: landscape) {
+
+}
+
+
+
+
+/* Phablet
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+// Portrait
+// ------------------------------
+
+@media only screen
+  and (min-device-width: $viewport-device-sm)
+  and (max-device-width: ($viewport-device-md - 1))
+  and (orientation: portrait) {
+
+}
+
+
+// Landscape
+// ------------------------------
+
+@media only screen
+  and (min-device-width: $viewport-device-md)
+  and (max-device-width: ($viewport-device-lg - 1))
+  and (orientation: landscape) {
+
+}
+
+
+
+
+/* Tablet (Small)
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+// Portrait
+// ------------------------------
+
+@media only screen
+  and (min-device-width: $viewport-device-md)
+  and (max-device-width: ($viewport-device-lg - 1))
+  and (orientation: portrait) {
+
+}
+
+
+// Landscape
+// ------------------------------
+
+@media only screen
+  and (min-device-width: $viewport-device-lg)
+  and (max-device-width: ($viewport-device-xl - 1))
+  and (orientation: landscape) {
+
+}
+
+
+
+
+/* Tablet (Large)
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+// Portrait
+// ------------------------------
+
+@media only screen
+  and (min-device-width: $viewport-device-lg)
+  and (max-device-width: ($viewport-device-xl - 1))
+  and (orientation: portrait) {
+
+}
+
+
+// Landscape
+// ------------------------------
+
+@media only screen
+  and (min-device-width: $viewport-device-xl)
+  and (orientation: landscape) {
+
+}

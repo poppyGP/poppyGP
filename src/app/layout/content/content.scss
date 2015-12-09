@@ -1,0 +1,249 @@
+$z-index-panel:     500;
+
+
+.gp-content {
+
+  box-sizing: border-box;
+  flex-direction: column;
+  display: flex;
+
+  //flex-grow: 0;
+  //flex-shrink: 0;
+  //padding-bottom: $navbar-height;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  height: 100%;
+  width: 100%;
+
+  // screen-xs
+  @media only screen and (max-width: $layout-breakpoint-sm - 1) {
+    max-width: 100%;
+    max-height: $panel-height-xs;
+    flex-basis: $panel-height-xs;
+  }
+
+  // screen-sm
+  @media only screen and (min-width: $layout-breakpoint-sm) and (max-width: $layout-breakpoint-md) {
+    max-width: 100%;
+    max-height: $panel-height-sm;
+    flex-basis: $panel-height-sm;
+  }
+
+  // screen-md
+  @media only screen and (min-width: $layout-breakpoint-md) and (max-width: $layout-breakpoint-lg) {
+    max-width: $panel-width-md;
+    max-height: $content-height;
+    flex-basis: $panel-width-md;
+  }
+
+  // screen-lg
+  @media only screen and (min-width: $layout-breakpoint-lg) and (max-width: $layout-breakpoint-xl - 1) {
+    max-width: $panel-width-lg;
+    max-height: $content-height;
+    flex-basis: $panel-width-lg;
+  }
+
+  // screen-xl
+  @media only screen and (min-width: $layout-breakpoint-xl) {
+    max-width: $panel-width-xl;
+    max-height: $content-height;
+    flex-basis: $panel-width-xl;
+  }
+
+
+  .gp-content-header {
+    max-height: $navbar-height;
+    height: $navbar-height;
+    background: #222;
+  }
+
+
+  .gp-content-panels {
+    background: #fefefe;
+    color: #000;
+    border-left: 1px solid #ccc;
+
+    width: 100%;
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 0px 2px 2px rgba(0, 0, 0, 0.098), 0px 0px 5px 1px rgba(0, 0, 0, 0.084);
+    display: flex;
+    flex-basis: 100%;
+    position: relative;
+    //height: $content-panels-height;
+    //min-height: $content-panels-height;
+    .panel-group {
+
+      margin-top: 8px;
+      min-width: 100%;
+      max-height: 100%;
+    }
+
+  }
+
+  &.ng-hide {
+
+  }
+}
+
+
+
+
+/* Accordion Variables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+$panel-toggle-height:       20px;
+$panel-toggle-font-size:    16px;
+$panel-toggle-padding-y:    2px;
+$panel-toggle-padding-x:    8px;
+$panel-toggle-margin:       24px;
+
+$panel-toggle-icon-height:  18px;
+
+
+
+
+/* Accordion Panels
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.gp-panel {
+
+  width: 100%;
+  margin-bottom: $panel-toggle-margin;
+
+
+  // Panel Heading
+  // ------------------------------
+
+  .gp-panel-toggle {
+    display: inline-block;
+
+    min-height: $panel-toggle-height;
+    min-width: 100%;
+
+    outline: none;
+
+    background: #f0f0f0;
+    text-decoration: none;
+    font-size: $panel-toggle-font-size;
+
+    padding-top: $panel-toggle-padding-y;
+    padding-bottom: $panel-toggle-padding-y;
+    padding-left: calc(1.5 * #{$panel-toggle-padding-x});
+    padding-right: $panel-toggle-padding-x;
+
+    box-shadow: $shadow-z2; // 0px 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 0px 2px 2px rgba(0, 0, 0, 0.098), 0px 0px 5px 1px rgba(0, 0, 0, 0.084);
+    border-bottom: 1px rgba(0, 0, 0, 0.12);
+
+    &:active, &:focus, &:hover {
+      text-decoration: none;
+    }
+  }
+
+
+  // Toggle Icon
+  // ------------------------------
+
+  .gp-toggle-icon  {
+    float: right;
+    display: inline-block;
+    vertical-align: bottom;
+    height: $panel-toggle-icon-height;
+
+
+    > svg {
+      border-radius: 50%;
+      transform: rotate(90deg);
+      transition: $swift-ease-in-out;
+
+      &:hover {
+        box-shadow: $shadow-z3;
+      }
+    }
+  }
+
+  &.panel-open {
+    .gp-toggle-icon > svg {
+      transform: rotate(180deg);
+    }
+  }
+
+
+  // Panel Body
+  // ------------------------------
+
+  .gp-panel-collapse {
+    position: relative;
+
+    &.in {
+
+      .gp-panel-body {
+        transition: $swift-ease-in-out;
+      }
+    }
+
+    .gp-panel-body {
+      //max-height: calc(100vh - #{$navbar-height} - #{$panel-toggle-height});
+      min-height: 480px;
+      box-shadow: $shadow-z1; //0px 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 0px 2px 2px rgba(0, 0, 0, 0.098), 0px 0px 5px 1px rgba(0, 0, 0, 0.084);
+    }
+  }
+}
+/*
+.gp-content-inner {
+  background: #fefefe;
+  color: #000;
+  border-left: 1px solid #ccc;
+  min-height: 100%;
+  position: relative;
+  width: 100%;
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 0px 2px 2px rgba(0, 0, 0, 0.098), 0px 0px 5px 1px rgba(0, 0, 0, 0.084);
+  padding-bottom: $navbar-height;
+
+  .gp-content-inner {
+    //min-height: 100%;
+    //position: relative;
+    //overflow-x: hidden;
+    //overflow-y: auto;
+
+  }
+}
+@media (min-width: 768px) {
+  gp-panel {
+
+  }
+}
+
+gp-panel-toggle {
+  min-height: 64px;
+  min-width: 64;
+  position: absolute;
+  top: 128px;
+  left: 0;
+  z-index: 1000;
+  background: #0ff;
+  color: #fff;
+}
+
+
+gp-panel.animate.ng-hide-remove {
+  animation: $swift-ease-in;
+}
+
+gp-panel.animate.ng-hide-add {
+  animation: $swift-ease-out;
+}
+
+.gp-show-add, .gp-show-remove {
+  transition: $swift-ease-in-out;
+}
+
+.gp-show-add.gp-show-add-active {
+  -webkit-transform: translate3d(0);
+}
+
+.gp-show-remove.gp-show-remove-active {
+  font-size:1.0em;
+  color:black;
+}
+*/

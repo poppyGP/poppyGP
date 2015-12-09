@@ -1,0 +1,139 @@
+
+
+
+
+
+/* Navbar Base Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+gp-navbar {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+
+  position: fixed;
+  top: 0;
+
+  z-index: 2;
+  width: 100%;
+  background: $navbar-background;
+
+  min-height: $navbar-base-height;
+  padding: 0 $navbar-base-padding;
+
+  border-bottom-color: $navbar-border-color;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: $navbar-border-color;
+  border-right-color: $navbar-border-color;
+  border-top-color: $navbar-border-color;
+
+  box-shadow: $navbar-box-shadow;
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+
+}
+
+
+// ------------------------------
+// Inner Container
+// ------------------------------
+
+.gp-navbar-inner {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+
+  height: $navbar-inner-height;
+  min-height: $navbar-inner-height;
+  max-height: $navbar-inner-height;
+  width: 100%;
+
+  color: $navbar-color;
+  font-weight: 500;
+  font-size: $navbar-font-size;
+  letter-spacing: 0.005em;
+
+  padding: 0;
+  margin: 0;
+
+  .gp-stripes, .button, .btn {
+    &:first-child {
+      margin-left: $navbar-margin-offset;
+    }
+    &:last-child {
+      margin-right: $navbar-margin-offset;
+    }
+  }
+
+}
+
+.gp-navbar-inner {
+  @media screen and (-ms-high-contrast: active) {
+    border-bottom: 1px solid #fff;
+  }
+}
+
+// Handle mobile portrait
+@media only screen and (min-width: 0) and (max-width: $layout-breakpoint-sm) and (orientation: portrait) {
+  gp-navbar {
+    min-height: navbar-portrait($navbar-base-height);
+    padding: 0 navbar-portrait($navbar-base-padding);
+  }
+
+  .gp-navbar-inner {
+    height: navbar-portrait($navbar-base-height);
+    max-height: navbar-portrait($navbar-base-height);
+    font-size: navbar-portrait($navbar-font-size);
+  }
+}
+
+// Handle mobile landscape
+@media only screen and (min-width: 0) and (max-width: $layout-breakpoint-sm) and (orientation: landscape) {
+  gp-navbar {
+    min-height: navbar-landscape($navbar-base-height);
+    padding: 0 navbar-landscape($navbar-base-padding);
+  }
+
+  .gp-navbar-inner {
+    height: navbar-landscape($navbar-base-height);
+    max-height: navbar-landscape($navbar-base-height);
+    font-size: navbar-landscape($navbar-font-size);
+  }
+}
+
+
+
+.old-nav {
+
+
+  .gp-navbar.navbar {
+    >.container-fluid {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    .navbar-brand {
+      margin-left: -1rem;
+      svg {
+        display: inline;
+        + * {
+          display: inline;
+          font-size: 20px;
+          line-height: ceil($line-height * 0.5);
+          margin-left: -0.5rem;
+          padding-bottom: 1rem;
+        }
+      }
+    }
+  }
+
+
+}

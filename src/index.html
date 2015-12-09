@@ -1,0 +1,316 @@
+<!doctype html>
+<html class="no-js" lang="en" ng-app="poppygp">
+
+<head>
+
+
+
+  <!-- Metadata Tags
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <!-- ––––––––––––––––––––––––––––––––––––––––––––– -->
+
+
+
+  <!-- Page Title
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <title ng-bind="title">
+
+  </title>
+
+  <!-- ––––––––––––––––––––––––––––––––––––––––––––– -->
+
+
+
+  <!-- Metadata Tags
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <meta name="author"               content="Jonathan Ho">
+  <meta name="application-name"     content="poppyGrandPrix">
+  <meta name="description"          content="Grand Prix de Papaveraceae">
+
+  <!-- ––––––––––––––––––––––––––––––––––––––––––––– -->
+
+
+
+  <!-- Facebook Open Graph
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <meta property="og:title"         content="poppyGrandPrix">
+  <meta property="og:site_name"     content="poppyGP">
+  <meta property="og:type"          content="website">
+  <meta property="og:url"           content="http://poppy.gq">
+  <meta property="og:image"         content="https://ustvstaticcdn1-a.akamaihd.net/i/channel/live/1_20560398,640x360,b.jpg">
+  <meta property="og:description"   content="Grand Prix de Papaveraceae">
+
+
+
+  <!-- Twitter Cards
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <meta name="twitter:card"         content="player">
+  <meta name="twitter:site"         content="@poppyGrandPrix">
+  <meta name="twitter:title"        content="poppyGP">
+  <meta name="twitter:description"  content="Grand Prix de Papaveraceae">
+  <meta name="twitter:image"        content="https://ustvstaticcdn1-a.akamaihd.net/i/channel/live/1_20560398,640x360,b.jpg">
+
+
+  <!-- ––––––––––––––––––––––––––––––––––––––––––––– -->
+
+
+
+  <!-- Favicon & Touch Icons
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <link rel="apple-touch-icon" sizes="57x57" href="assets/icons/touch/apple-touch-icon-57x57.png?v=letsgo2016">
+  <link rel="apple-touch-icon" sizes="60x60" href="assets/icons/touch/apple-touch-icon-60x60.png?v=letsgo2016">
+  <link rel="apple-touch-icon" sizes="72x72" href="assets/icons/touch/apple-touch-icon-72x72.png?v=letsgo2016">
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/icons/touch/apple-touch-icon-76x76.png?v=letsgo2016">
+  <link rel="apple-touch-icon" sizes="114x114" href="assets/icons/touch/apple-touch-icon-114x114.png?v=letsgo2016">
+  <link rel="apple-touch-icon" sizes="120x120" href="assets/icons/touch/apple-touch-icon-120x120.png?v=letsgo2016">
+  <link rel="apple-touch-icon" sizes="144x144" href="assets/icons/touch/apple-touch-icon-144x144.png?v=letsgo2016">
+  <link rel="apple-touch-icon" sizes="152x152" href="assets/icons/touch/apple-touch-icon-152x152.png?v=letsgo2016">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/touch/apple-touch-icon-180x180.png?v=letsgo2016">
+
+  <link rel="icon" type="image/png" href="assets/icons/touch/favicon-32x32.png?v=letsgo2016" sizes="32x32">
+  <link rel="icon" type="image/png" href="assets/icons/touch/favicon-194x194.png?v=letsgo2016" sizes="194x194">
+  <link rel="icon" type="image/png" href="assets/icons/touch/favicon-96x96.png?v=letsgo2016" sizes="96x96">
+  <link rel="icon" type="image/png" href="assets/icons/touch/android-chrome-192x192.png?v=letsgo2016" sizes="192x192">
+  <link rel="icon" type="image/png" href="assets/icons/touch/favicon-16x16.png?v=letsgo2016" sizes="16x16">
+
+  <link rel="manifest" href="assets/icons/touch/manifest.json?v=letsgo2016">
+  <link rel="mask-icon" href="assets/icons/touch/safari-pinned-tab.svg?v=letsgo2016" color="#004626">
+  <link rel="shortcut icon" href="assets/icons/touch/favicon.ico?v=letsgo2016">
+
+  <meta name="apple-mobile-web-app-title" content="poppyGP">
+  <meta name="application-name" content="poppyGP">
+  <meta name="msapplication-TileColor" content="#004626">
+  <meta name="msapplication-TileImage" content="assets/icons/touch/mstile-144x144.png?v=letsgo2016">
+  <meta name="msapplication-config" content="assets/icons/touch/browserconfig.xml?v=letsgo2016">
+  <meta name="theme-color" content="#004626">
+
+  <!-- ––––––––––––––––––––––––––––––––––––––––––––– -->
+
+
+
+  <!-- Google Fonts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,300italic,400italic,600,200" rel="stylesheet">
+
+  <!-- ––––––––––––––––––––––––––––––––––––––––––––– -->
+
+
+
+  <!-- Inject Styles
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
+  <!-- bower:css -->
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:css({.tmp/serve,src}) styles/app.css -->
+  <!-- inject:css -->
+  <!-- endinject -->
+  <!-- endbuild -->
+
+  <!-- ––––––––––––––––––––––––––––––––––––––––––––– -->
+
+
+
+  <!-- Browser Compatibility
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <!-- build:js(src) scripts/modernizr.js -->
+  <script src="../bower_components/modernizr/modernizr.js"></script>
+  <!-- endbuild -->
+
+  <!-- ––––––––––––––––––––––––––––––––––––––––––––– -->
+
+
+
+</head>
+
+<body>
+
+
+  <!-- Browse Happy
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <!--[if lt IE 10]>
+    <p class="browsehappy">
+      You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+    </p>
+  <![endif]-->
+
+  <!-- END browse happy –––––––––––––––––––––––––––– -->
+
+
+
+
+
+
+  <!-- Navbar –––––––––––––––––––––––––––––––––––––– -->
+
+  <gp-navbar>
+
+    <button class="nav-button" type="button" ng-click="">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
+        <path d="M0 0h18v18h-18z" fill="none"></path>
+        <path d="M2 13.5h14v-1.5h-14v1.5zm0-4h14v-1.5h-14v1.5zm0-5.5v1.5h14v-1.5h-14z"></path>
+      </svg>
+    </button>
+
+    <span flex></span>
+
+    <gp-stripes></gp-stripes>
+
+    <span>poppyGP</span>
+
+    <span flex></span>
+
+    <button class="nav-button" type="button" ng-click="">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" height="18" viewBox="0 0 24 24" width="18">
+        <path d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"/>
+        <path d="M0 0h24v24H0z" fill="none"/>
+      </svg>
+    </button>
+
+  </gp-navbar>
+
+  <!-- END navbar –––––––––––––––––––––––––––––––––– -->
+
+
+
+
+
+
+  <!-- Page Wrapper
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <div id="page-wrapper"
+       layout-fill
+       layout-sm="column"
+       layout-md="column"
+       layout-gt-md="row">
+
+
+
+
+    <!-- Main Wrapper
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <div id="main-wrapper">
+
+
+      <!-- Player –––––––––––––––––––––––––––––––––––––– -->
+
+      <gp-inception>
+
+      </gp-inception>
+
+
+      <!-- END player –––––––––––––––––––––––––––––––––– -->
+
+
+      <!-- Schedule –––––––––––––––––––––––––––––––––––– -->
+
+      <div class="gp-schedule" ng-include="'app/schedule/schedule.html'">
+
+      </div>
+
+      <!-- END schedule –––––––––––––––––––––––––––––––– -->
+
+
+    </div>
+
+    <!-- END main wrapper –––––––––––––––––––––––––––– -->
+
+
+
+
+
+
+    <!-- Content Panel
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <div class="gp-content"
+         controller="ContentController as vm"
+         ng-hide="vm.hidden"
+         ng-class="{'animate': vm.hidden}"
+         ng-include="'app/layout/content/content.html'">
+
+    </div>
+
+    <!-- END content panel ––––––––––––––––––––––––––– -->
+
+
+
+
+
+
+  </div>
+
+  <!-- END page wrapper –––––––––––––––––––––––––––– -->
+
+
+
+
+
+
+  <!-- Navbar –––––––––––––––––––––––––––––––––––––– -->
+
+  <gp-subnav>
+  </gp-subnav>
+
+  <!-- END navbar –––––––––––––––––––––––––––––––––– -->
+
+
+
+
+
+
+
+
+  <!-- Google Analytics
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', 'UA-63184114-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  <script async src='//www.google-analytics.com/analytics.js'></script>
+
+  <!-- ––––––––––––––––––––––––––––––––––––––––––––– -->
+
+
+
+  <!-- Inject JavaScript & Partials
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <!-- build:js(src) scripts/vendor.js -->
+  <!-- bower:js -->
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
+  <!-- inject:js -->
+  <!-- endinject -->
+
+  <!-- inject:partials -->
+  <!-- endinject -->
+  <!-- endbuild -->
+
+  <!-- ––––––––––––––––––––––––––––––––––––––––––––– -->
+
+
+
+</body>
+
+</html>

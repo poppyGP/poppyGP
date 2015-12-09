@@ -1,0 +1,15 @@
+// ------------------------------
+// Landscape & Portrait Functions
+// ------------------------------
+
+@function navbar-landscape($dimension) {
+  @return ceil(($dimension * 0.875));
+}
+
+@function navbar-portrait($dimension) {
+  @return ceil(($dimension * 0.75));
+}
+
+@function getNavbarHeight() {
+
+}
