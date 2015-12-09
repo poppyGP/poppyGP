@@ -7,9 +7,20 @@
          ng-repeat="track in vm.trackList | limitTo: 5">
       <img class="card-img-top" data-src="..." alt="Card image cap">
       <div class="card-block">
-        <h4 class="card-title">{{ track.duration }}</h4>
-        <p class="card-text">{{ track.title }}</p>
-        <p class="card-text"><small class="text-muted">{{ track.location }}</small></p>
+
+        <h4 class="card-title">
+          {{ track.title }}
+        </h4>
+
+        <p class="card-text">
+          {{ track.duration }}
+        </p>
+
+        <p class="card-text">
+          <small class="text-muted">
+          </small>
+        </p>
+
       </div>
     </div>
 

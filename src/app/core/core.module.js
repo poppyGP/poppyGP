@@ -12,6 +12,7 @@
       'ngSanitize',
       'ngTouch',
 
+      'angularMoment',
       'firebase',
       'ui.bootstrap',
       'ui.router',
