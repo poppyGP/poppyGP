@@ -3,15 +3,15 @@
 
   angular
     .module('poppygp.components')
-    .directive('gpSubnav', gpSubnavDirective);
+    .directive('gpToolbar', gpToolbarDirective);
 
   /** @ngInject */
-  function gpSubnavDirective() {
+  function gpToolbarDirective() {
     var directive = {
       restrict: 'E',
       transclude: true,
-      replace: false,
-      templateUrl: 'app/components/subnav/subnav.html'
+      replace: true,
+      templateUrl: 'app/components/toolbar/toolbar.html'
     };
 
     return directive;

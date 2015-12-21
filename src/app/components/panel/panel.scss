@@ -1,0 +1,25 @@
+$panel-mobile-width:  360px !default;
+$panel-desktop-width: 480px !default;
+$panel-min-space:     64px !default;
+
+md-sidenav.gp-panel {
+  width:      $panel-mobile-width;
+  max-width:  $panel-mobile-width;
+
+  &.md-closed.md-locked-open-add-active {
+    width:      $panel-mobile-width;
+    min-width:  $panel-mobile-width;
+  }
+
+
+  @media screen and (min-width: $layout-breakpoint-xs) {
+    max-width: $panel-desktop-width;
+  }
+
+  @media screen and (max-width: $panel-desktop-width + $panel-min-space) {
+    width:      calc(100% - #{$panel-min-space});
+    min-width:  calc(100% - #{$panel-min-space});
+    max-width:  calc(100% - #{$panel-min-space});
+  }
+
+}

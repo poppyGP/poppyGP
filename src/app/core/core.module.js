@@ -7,6 +7,7 @@
       'ngAnimate',
       'ngAria',
       'ngCookies',
+      'ngMaterial',
       'ngMessages',
       'ngResource',
       'ngSanitize',

@@ -7,7 +7,7 @@
     .controller('ScheduleController', ScheduleController);
 
   /** @ngInject */
-  function ScheduleController($log, $firebaseArray, moment) {
+  function ScheduleController($log, $firebaseArray) {
     var vm = this;
 
     var ref = new Firebase("https://poppygp-temp.firebaseio.com/playlist/trackList/track");

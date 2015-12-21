@@ -1,0 +1,31 @@
+$toolbar-zindex:      70 !default;
+$toolbar-background:  #222222;
+$toolbar-font-color:  rgba(255, 255, 255, 0.87);
+
+md-toolbar.gp-toolbar {
+
+  background-color: $toolbar-background;
+  color: $toolbar-font-color;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: $toolbar-zindex;
+
+  .md-toolbar-tools {
+    background-color: $toolbar-background;
+    color: $toolbar-font-color;
+  }
+
+  md-icon, .md-button {
+    color: $toolbar-font-color;
+  }
+
+  .button-main {
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+    text-transform: none;
+  }
+
+}
