@@ -25,13 +25,13 @@
         icon  : 'home',
         tmpl  : 'app/layout/sections/home/home.html'
       }, {
-        name  : 'Info',
-        icon  : 'info',
-        tmpl  : 'app/layout/sections/info/info.html'
-      }, {
         name  : 'Webchat',
         icon  : 'chat',
         tmpl  : 'app/layout/sections/chat/chat.html'
+      }, {
+        name  : 'Info',
+        icon  : 'info',
+        tmpl  : 'app/layout/sections/info/info.html'
       }, {
         name  : 'Race',
         icon  : 'web_asset',

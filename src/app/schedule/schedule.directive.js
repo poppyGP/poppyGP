@@ -10,7 +10,6 @@
     return {
       restrict: 'E',
       replace: true,
-      transclude: true,
       templateUrl: 'app/schedule/schedule.html'
     };
   }

@@ -18,22 +18,22 @@
             layout-fill
             layout-margin>
 
+
       <md-tab-label>
-        <md-icon class="material-icons">
-          {{ section.icon }}
-        </md-icon>
+        <md-icon class="material-icons">{{ section.icon }}</md-icon>
+        <md-tooltip>{{ section.name }}</md-tooltip>
       </md-tab-label>
 
       <md-tab-body>
-        <md-content layout-padding
-                    layout-fill
+        <md-content layout-fill
                     md-scroll-y
                     class="panel-content"
                     ng-include="section.tmpl">
+
+          <!-- ngInclude -->
+
         </md-content>
       </md-tab-body>
-
-
 
 
     </md-tab>

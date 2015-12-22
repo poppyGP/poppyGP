@@ -26,20 +26,17 @@ md-sidenav.gp-panel {
     min-width:  calc(100% - #{$panel-min-space});
     max-width:  calc(100% - #{$panel-min-space});
   }
+}
 
+#tab-content-1 {
+  > div {
+    height: 100%;
+    .panel-content {
+      padding: 0;
+    }
+  }
 }
 
 .panel-content {
-
-}
-.webchat {
-  md-tab-content {
-    > div {
-      height: 100%;
-    }
-  }
-  [md-tabs-template] {
-    height: 100%;
-
-  }
+  padding: 8px;
 }
