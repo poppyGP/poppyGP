@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('poppygp.components')
+    .module('poppygp.layout')
     .directive('gpToolbar', gpToolbarDirective);
 
   /** @ngInject */
@@ -11,7 +11,7 @@
       restrict: 'E',
       transclude: true,
       replace: true,
-      templateUrl: 'app/components/toolbar/toolbar.html'
+      templateUrl: 'app/layout/toolbar/toolbar.html'
     };
 
     return directive;
