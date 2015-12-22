@@ -1,0 +1,47 @@
+<md-sidenav class="gp-panel md-sidenav-right"
+            md-is-locked-open="$mdMedia('gt-md') && main.panelIsOpen"
+            md-component-id="right"
+            layout="column">
+
+
+
+
+  <md-tabs md-border-bottom
+           md-align-tabs="bottom"
+           flex>
+
+
+
+
+    <md-tab ng-repeat="section in vm.sections"
+            id="section.name | lowercase"
+            layout-fill
+            layout-margin>
+
+      <md-tab-label>
+        <md-icon class="material-icons">
+          {{ section.icon }}
+        </md-icon>
+      </md-tab-label>
+
+      <md-tab-body>
+        <md-content layout-padding
+                    layout-fill
+                    md-scroll-y
+                    class="panel-content"
+                    ng-include="section.tmpl">
+        </md-content>
+      </md-tab-body>
+
+
+
+
+    </md-tab>
+
+
+
+</md-tabs>
+
+
+
+</md-sidenav>

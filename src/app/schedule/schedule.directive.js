@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('poppygp.components')
+    .module('poppygp.schedule')
     .directive('gpSchedule', gpScheduleDirective);
 
   /* @ngInject */
@@ -11,7 +11,7 @@
       restrict: 'E',
       replace: true,
       transclude: true,
-      templateUrl: 'app/components/schedule/schedule.html'
+      templateUrl: 'app/schedule/schedule.html'
     };
   }
 

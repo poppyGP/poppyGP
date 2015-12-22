@@ -1,3 +1,26 @@
-.gp-schedule {
+$schedule-mobile-width:  240px !default;
+$schedule-desktop-width: 280px !default;
+$schedule-min-space:     36px !default;
+
+md-sidenav.gp-schedule {
+  width:      $schedule-mobile-width;
+  max-width:  $schedule-mobile-width;
   padding: 1em;
+
+  &.md-closed.md-locked-open-add-active {
+    width:      $schedule-mobile-width;
+    min-width:  $schedule-mobile-width;
+  }
+
+
+  @media screen and (min-width: $layout-breakpoint-xs) {
+    max-width: $schedule-desktop-width;
+  }
+
+  @media screen and (max-width: $schedule-desktop-width + $schedule-min-space) {
+    width:      calc(100% - #{$schedule-min-space});
+    min-width:  calc(100% - #{$schedule-min-space});
+    max-width:  calc(100% - #{$schedule-min-space});
+  }
+
 }

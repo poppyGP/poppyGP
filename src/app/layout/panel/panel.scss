@@ -3,6 +3,11 @@ $panel-desktop-width: 480px !default;
 $panel-min-space:     64px !default;
 
 md-sidenav.gp-panel {
+  md-tab-content {
+    overflow-x: hidden;
+  }
+
+
   width:      $panel-mobile-width;
   max-width:  $panel-mobile-width;
 
@@ -22,4 +27,19 @@ md-sidenav.gp-panel {
     max-width:  calc(100% - #{$panel-min-space});
   }
 
+}
+
+.panel-content {
+
+}
+.webchat {
+  md-tab-content {
+    > div {
+      height: 100%;
+    }
+  }
+  [md-tabs-template] {
+    height: 100%;
+
+  }
 }

@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('poppygp.components')
+    .module('poppygp.layout')
     .directive('gpPanel', gpPanelDirective);
 
   /* @ngInject */
@@ -10,8 +10,9 @@
     return {
       restrict: 'E',
       replace: true,
-      transclude: true,
-      templateUrl: 'app/components/panel/panel.html'
+      templateUrl: 'app/layout/panel/panel.html',
+      controller: 'PanelController',
+      controllerAs: 'vm'
     };
   }
 

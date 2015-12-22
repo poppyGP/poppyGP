@@ -20,6 +20,22 @@
     }
 
     function setPanelSections() {
+      vm.panelSections = [{
+        name  : 'Home',
+        tmpl  : 'app/layout/sections/home.html'
+      }, {
+        name  : 'Info',
+        tmpl  : 'app/layout/sections/info.html'
+      }, {
+        name  : 'Webchat',
+        tmpl  : 'app/layout/sections/chat.html'
+      }, {
+        name  : 'Race',
+        tmpl  : 'app/layout/sections/race.html'
+      }, {
+        name  : 'Help',
+        tmpl  : 'app/layout/sections/help.html'
+      }];
     }
 
   }
